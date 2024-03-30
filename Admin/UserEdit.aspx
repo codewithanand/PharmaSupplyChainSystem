@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label for="Email">Email Address</label>
-                <asp:TextBox CssClass="form-control" ID="Email" runat="server" disabled></asp:TextBox>
+                <asp:TextBox CssClass="form-control" ID="Email" runat="server" Enabled="false"></asp:TextBox>
                 <asp:RequiredFieldValidator CssClass="text-danger text-small" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required" ControlToValidate="Email" Display="Dynamic"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="EmailCheckValidator" ControlToValidate="Email" CssClass="text-danger text-small" runat="server" ErrorMessage="Not a valid email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
             </div>

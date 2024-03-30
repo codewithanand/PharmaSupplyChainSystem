@@ -21,11 +21,17 @@
                 <asp:TextBox CssClass="form-control" ID="CategoryTitle" runat="server"></asp:TextBox>
             </div>
             <div class="form-group">
+                <label for="CategoryTitle">Slug</label>
+                <asp:TextBox CssClass="form-control" ID="CategorySlug" runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
                 <label for="Image">Cover Image</label>
                 <asp:FileUpload CssClass="form-control" ID="Image" runat="server" />
             </div>
             <div class="form-group">
-                <button class="btn btn-primary">Create</button>
+                <asp:Button CssClass="btn btn-primary" ID="CategoryCreateButton" runat="server" Text="Create" OnClick="CategoryCreateButton_Click" />
+                <asp:Label CssClass="text-danger text-small" ID="ErrorMessage" runat="server" Text=""></asp:Label>
+                <asp:Label CssClass="text-success text-small" ID="SuccessMessage" runat="server" Text=""></asp:Label>
             </div>
         </div>
     </div>

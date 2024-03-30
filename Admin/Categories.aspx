@@ -28,17 +28,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Category Name</td>
-                                    <td>
-                                        <img src="" height="150" />
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-warning btn-sm" href="#"><i class="mdi mdi-pencil-box-outline"></i></a>
-                                        <a class="btn btn-danger btn-sm" href="#"><i class="mdi mdi-delete"></i></a>
-                                    </td>
-                                </tr>
-                                <asp:Literal ID="UserRowLiteral" runat="server"></asp:Literal>
+                                <asp:Literal ID="CategoryRowLiteral" runat="server"></asp:Literal>
                             </tbody>
                         </table>
                     </div>

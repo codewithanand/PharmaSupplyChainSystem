@@ -23,6 +23,7 @@
                             <thead>
                                 <tr>
                                     <th>Product</th>
+                                    <th>Category</th>
                                     <th>Owner</th>
                                     <th>Quantity</th>
                                     <th>Price</th>
@@ -30,17 +31,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Product Name</td>
-                                    <td>XYZ Company</td>
-                                    <td>100</td>
-                                    <td>1234</td>
-                                    <td>
-                                        <a class="btn btn-warning btn-sm" href="#"><i class="mdi mdi-pencil-box-outline"></i></a>
-                                        <a class="btn btn-danger btn-sm" href="#"><i class="mdi mdi-delete"></i></a>
-                                    </td>
-                                </tr>
-                                <asp:Literal ID="UserRowLiteral" runat="server"></asp:Literal>
+                                <asp:Literal ID="ProductRowLiteral" runat="server"></asp:Literal>
                             </tbody>
                         </table>
                     </div>

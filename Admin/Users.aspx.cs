@@ -1,6 +1,7 @@
 ﻿using MediConnect.Utils;
 using System;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace MediConnect.Admin
 {
@@ -22,7 +23,7 @@ namespace MediConnect.Admin
                 }
                 catch(Exception ex)
                 {
-                    Console.WriteLine(ex);
+                    Console.WriteLine(ex.ToString());
                 }
             }
         }
@@ -31,7 +32,7 @@ namespace MediConnect.Admin
         {
             con.Open();
 
-            string getQuery = "SELECT id, name, email, user_type FROM [users] WHERE deleted_at IS NULL ORDER BY id DESC";
+            string getQuery = "SELECT id, name, email, user_type FROM [users] WHERE deleted_at IS NULL";
             SqlCommand getCmd = new SqlCommand(getQuery, con);
             SqlDataReader reader = getCmd.ExecuteReader();
             while (reader.Read())
@@ -69,7 +70,7 @@ namespace MediConnect.Admin
                 {
                     UserRowLiteral.Text += "<td><span class=\"badge bg-warning text-white\">consumer</span></td>";
                 }
-                UserRowLiteral.Text += "<td><a class=\"btn btn-info btn-sm me-2\" href=\"UserEdit.aspx?id="+ reader.GetValue(0).ToString() + "\"><i class=\"mdi mdi-lead-pencil\"></i></a><a class=\"btn btn-danger btn-sm\" href=\"UserDelete.aspx?id="+ reader.GetValue(0).ToString() + "\"><i class=\"mdi mdi-delete\"></i></a></td>";
+                UserRowLiteral.Text += "<td><a class=\"btn btn-info btn-sm me-2\" href=\"UserEdit.aspx?id="+ reader.GetValue(0).ToString() + "\"><i class=\"mdi mdi-lead-pencil\"></i></a><a class=\"btn btn-danger btn-sm\" onclick=\"return confirm('Are you sure want to delete this user?')\" href=\"UserDelete.aspx?id="+ reader.GetValue(0).ToString() + "\"><i class=\"mdi mdi-delete\"></i></a></td>";
                 UserRowLiteral.Text += "</tr>";
             }
             
