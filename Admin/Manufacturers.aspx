@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Categories.aspx.cs" Inherits="MediConnect.Admin.Categories" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Manufacturers.aspx.cs" Inherits="MediConnect.Admin.Manufacturers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Categories</title>
+    <title>Manufacturers</title>
     <link href="../assets/admin/datatable/dataTable.bootstrap4.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Categories
+    Manufacturers
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,21 +15,22 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex flex-row justify-content-between mb-3">
-                        <span class="h4">Categories</span>
-                        <a class="btn btn-primary btn-icon-text btn-sm" href="CategoryAdd.aspx"><i class="mdi mdi-database-plus btn-icon-prepend"></i>Add New</a>
+                        <span class="h4">Manufacturers</span>
+                        <a class="btn btn-primary btn-icon-text btn-sm" href="ManufacturerAdd.aspx"><i class="mdi mdi-database-plus btn-icon-prepend"></i>Add New</a>
                     </div>
                     <div class="table-responsive">
-                        <table id="categoryDataTable" class="table table-striped mb-3">
+                        <table id="manufacturerDataTable" class="table table-striped mb-3">
                             <thead>
                                 <tr>
-                                    <th>Category</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
+                                    <th>Manufacturer</th>
+                                    <th>Address</th>
+                                    <th>Contact</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 
-                                <asp:Literal ID="CategoryRowLiteral" runat="server"></asp:Literal>
+                                <asp:Literal ID="ManufacturerRowLiteral" runat="server"></asp:Literal>
                             </tbody>
                         </table>
                     </div>
@@ -45,7 +46,7 @@
     <script src="../assets/admin/datatable/dataTable.bootstrap4.js"></script>
     <script>
         $(document).ready(function () {
-            $('#categoryDataTable').DataTable();
+            $('#manufacturerDataTable').DataTable();
         });
     </script>
 </asp:Content>

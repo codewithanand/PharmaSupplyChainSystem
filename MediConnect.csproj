@@ -71,6 +71,8 @@
     <Content Include="ActivateAccount.aspx" />
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\CategoryAdd.aspx" />
+    <Content Include="Admin\ManufacturerAdd.aspx" />
+    <Content Include="Admin\Manufacturers.aspx" />
     <Content Include="Admin\ProductAdd.aspx" />
     <Content Include="Admin\Products.aspx" />
     <Content Include="Admin\UserAdd.aspx" />
@@ -1064,6 +1066,20 @@
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManufacturerAdd.aspx.cs">
+      <DependentUpon>ManufacturerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManufacturerAdd.aspx.designer.cs">
+      <DependentUpon>ManufacturerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Manufacturers.aspx.cs">
+      <DependentUpon>Manufacturers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Manufacturers.aspx.designer.cs">
+      <DependentUpon>Manufacturers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ProductAdd.aspx.cs">
       <DependentUpon>ProductAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1204,10 +1220,12 @@
     <Compile Include="Utils\Auth.cs" />
     <Compile Include="Utils\AuthMiddleware.cs" />
     <Compile Include="Utils\Connection.cs" />
+    <Compile Include="Utils\ImageHandler.cs" />
     <Compile Include="Utils\MailServiceProvider.cs" />
     <Compile Include="Utils\MailTemplates.cs" />
     <Compile Include="Utils\MyCryptography.cs" />
     <Compile Include="Utils\RoleMiddleware.cs" />
+    <Compile Include="Utils\TextFormatter.cs" />
     <Compile Include="Utils\TokenGenerator.cs" />
     <Compile Include="Utils\VerifiedMiddleware.cs" />
   </ItemGroup>
@@ -1397,6 +1415,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\uploads\category\" />
+    <Folder Include="assets\uploads\manufacturer\" />
+    <Folder Include="assets\uploads\product\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

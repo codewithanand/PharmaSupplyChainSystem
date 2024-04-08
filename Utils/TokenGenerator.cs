@@ -32,13 +32,6 @@ namespace MediConnect.Utils
             return sb.ToString();
         }
 
-        public static string Slugify(string text)
-        {
-            string slug = Regex.Replace(text, @"[^a-zA-Z0-9\s-]", "");
-            slug = slug.Replace(' ', '-').ToLower();
-            slug = Regex.Replace(slug, @"-+", "-");
-            slug = slug.Trim('-');
-            return slug;
-        }
+        
     }
 }

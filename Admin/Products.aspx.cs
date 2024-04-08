@@ -1,12 +1,6 @@
 ﻿using MediConnect.Utils;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MediConnect.Admin
 {
@@ -37,7 +31,7 @@ namespace MediConnect.Admin
         {
             con.Open();
 
-            string getQuery = "SELECT products.id AS id, products.name AS name, categories.name AS category, manufacturers.name AS owner, products.quantity AS quantity, products.price AS price FROM dbo.products INNER JOIN categories ON products.id = categories.id INNER JOIN manufacturers ON products.id = manufacturers.id";
+            string getQuery = "SELECT products.id AS id, products.name AS name, categories.name AS category, manufacturers.name AS owner, products.quantity AS quantity, products.price AS price FROM products INNER JOIN categories ON products.category_id = categories.id INNER JOIN manufacturers ON products.manufacturer_id = manufacturers.id";
             SqlCommand getCmd = new SqlCommand(getQuery, con);
             SqlDataReader reader = getCmd.ExecuteReader();
             while (reader.Read())

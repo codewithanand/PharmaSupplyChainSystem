@@ -11,80 +11,35 @@ namespace MediConnect.Admin
 {
 
 
-    public partial class ProductAdd
+    public partial class ManufacturerAdd
     {
 
         /// <summary>
-        /// Supplier control.
+        /// Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Supplier;
+        protected global::System.Web.UI.WebControls.TextBox Name;
 
         /// <summary>
-        /// Category control.
+        /// Address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Category;
+        protected global::System.Web.UI.WebControls.TextBox Address;
 
         /// <summary>
-        /// ProductUID control.
+        /// Contact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProductUID;
-
-        /// <summary>
-        /// ProductTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProductTitle;
-
-        /// <summary>
-        /// Description control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Description;
-
-        /// <summary>
-        /// Price control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Price;
-
-        /// <summary>
-        /// Quantity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantity;
-
-        /// <summary>
-        /// ExpiryDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ExpiryDate;
+        protected global::System.Web.UI.WebControls.TextBox Contact;
 
         /// <summary>
         /// Image control.
@@ -96,13 +51,13 @@ namespace MediConnect.Admin
         protected global::System.Web.UI.WebControls.FileUpload Image;
 
         /// <summary>
-        /// CreateProductButton control.
+        /// CreateManufacturerButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateProductButton;
+        protected global::System.Web.UI.WebControls.Button CreateManufacturerButton;
 
         /// <summary>
         /// ErrorMessage control.

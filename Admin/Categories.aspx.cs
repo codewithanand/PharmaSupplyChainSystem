@@ -1,6 +1,7 @@
 ﻿using MediConnect.Utils;
 using System;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace MediConnect.Admin
 {
@@ -37,7 +38,8 @@ namespace MediConnect.Admin
             {
                 CategoryRowLiteral.Text += "<tr>";
                 CategoryRowLiteral.Text += "<td>" + reader.GetValue(1) + "</td>";
-                CategoryRowLiteral.Text += "<td><img src=\"" + reader.GetValue(3) + "\" height=\"70\" /></td>";
+                CategoryRowLiteral.Text += "<td><img src='../assets/uploads/category/"+ reader.GetValue(3) + "' /></td>";
+
                 CategoryRowLiteral.Text += "<td><a class=\"btn btn-info btn-sm me-2\" href=\"CategoryEdit.aspx?id=" + reader.GetValue(0).ToString() + "\"><i class=\"mdi mdi-lead-pencil\"></i></a><a class=\"btn btn-danger btn-sm\" onclick=\"return confirm('Are you sure want to delete this category?')\" href=\"CategoryDelete.aspx?id=" + reader.GetValue(0).ToString() + "\"><i class=\"mdi mdi-delete\"></i></a></td>";
                 CategoryRowLiteral.Text += "</tr>";
             }

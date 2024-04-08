@@ -39,7 +39,7 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-date dropdown">
                         <a class="nav-link d-flex justify-content-center align-items-center" href="javascript:;">
-                            <h6 class="date mb-0">Today : <script>document.write(new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear());</script></h6>
+                            <h6 class="date mb-0">Today :  <%= DateTime.Today.ToString("MMMM d, yyyy") %></h6>
                             <i class="typcn typcn-calendar"></i>
                         </a>
                     </li>
@@ -105,6 +105,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="Manufacturers.aspx">
+                            <i class="mdi mdi-flask-outline menu-icon"></i>
+                            <span class="menu-title">Manufacturers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="Categories.aspx">
                             <i class="mdi mdi-vector-arrange-above menu-icon"></i>
                             <span class="menu-title">Categories</span>
@@ -120,6 +126,12 @@
                         <a class="nav-link" href="Orders.aspx">
                             <i class="mdi mdi-cart-outline menu-icon"></i>
                             <span class="menu-title">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Trackings.aspx">
+                            <i class="mdi mdi-share-variant menu-icon"></i>
+                            <span class="menu-title">Trackings</span>
                         </a>
                     </li>
                 </ul>
