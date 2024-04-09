@@ -23,13 +23,15 @@ namespace MediConnect
             try
             {
                 con.Open();
-                string getQuery = "SELECT name, email, user_type, is_active from [users] WHERE email='"+ Email.Text.ToString() + "' AND password='"+ MyCryptography.MyEncrypt(Password.Text.ToString()) + "'";
+                string getQuery = "SELECT name, email, user_type, is_active, id from [users] WHERE email='"+ Email.Text.ToString() + "' AND password='"+ MyCryptography.MyEncrypt(Password.Text.ToString()) + "'";
                 SqlCommand getCmd = new SqlCommand(getQuery, con);
                 SqlDataReader reader = getCmd.ExecuteReader();
                 
                 if (reader.Read())
                 {
                     // Setting Session
+                    Session.Add("user_id", reader.GetValue(4).ToString());
+                    Session.Add("user_name", reader.GetValue(0).ToString());
                     Session.Add("user", reader.GetValue(1).ToString());
 
                     // Setting Cookies

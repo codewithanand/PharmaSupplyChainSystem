@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ActivateAccount.aspx" />
+    <Content Include="AddToCart.aspx" />
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\CategoryAdd.aspx" />
     <Content Include="Admin\ManufacturerAdd.aspx" />
@@ -1038,6 +1039,13 @@
     <Compile Include="ActivateAccount.aspx.designer.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1143,6 +1151,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="EmailNotice.aspx.cs">
       <DependentUpon>EmailNotice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
