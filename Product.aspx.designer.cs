@@ -11,52 +11,61 @@ namespace MediConnect
 {
 
 
-    public partial class Cart
+    public partial class Product
     {
 
         /// <summary>
-        /// CartListView control.
+        /// ProductImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView CartListView;
+        protected global::System.Web.UI.WebControls.Image ProductImage;
 
         /// <summary>
-        /// TotalCartItems control.
+        /// ProductTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalCartItems;
+        protected global::System.Web.UI.WebControls.Label ProductTitle;
 
         /// <summary>
-        /// SubTotalPrice control.
+        /// ProductDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SubTotalPrice;
+        protected global::System.Web.UI.WebControls.Label ProductDescription;
 
         /// <summary>
-        /// GSTValue control.
+        /// ProductPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GSTValue;
+        protected global::System.Web.UI.WebControls.Label ProductPrice;
 
         /// <summary>
-        /// TotalPrice control.
+        /// ProductQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalPrice;
+        protected global::System.Web.UI.WebControls.TextBox ProductQuantity;
+
+        /// <summary>
+        /// AddToCartBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddToCartBtn;
     }
 }

@@ -11,9 +11,6 @@
 
     <title>MediConnect</title>
 
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/client/images/logo/favicon.png" type="image/x-icon">
 
@@ -29,6 +26,9 @@
     <link rel="stylesheet" href="assets/client/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/client/css/linearicons.css">
     <link rel="stylesheet" href="assets/client/css/style.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -39,22 +39,22 @@
 
     <!-- Header Area Starts -->
     <header class="header-area">
-        <div class="header-top">
+        <div class="header-top bg-secondary text-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 d-md-flex">
-                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> +91 905 708 2563</h6>
-                        <h6 class="mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span> mediconnect@gmail.com</h6>
-                        <h6><span class="mr-2"><i class="fa fa-map-marker"></i></span> Ranchi India</h6>
+                        <h6 class="text-white mr-3"><span class="mr-2"><i class="fa fa-mobile"></i></span> +91 905 708 2563</h6>
+                        <h6 class="text-white mr-3"><span class="mr-2"><i class="fa fa-envelope-o"></i></span> mediconnect@gmail.com</h6>
+                        <h6 class="text-white"><span class="mr-2"><i class="fa fa-map-marker"></i></span> Ranchi India</h6>
                     </div>
                     <div class="col-lg-3">
                         <div class="social-links">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                <li><a class="text-white" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="text-white" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a class="text-white" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="text-white" href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a class="text-white" href="#"><i class="fa fa-vimeo"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -183,5 +183,8 @@
     <script src="assets/client/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/client/js/vendor/superfish.min.js"></script>
     <script src="assets/client/js/main.js"></script>
+
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>

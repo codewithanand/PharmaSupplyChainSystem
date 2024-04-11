@@ -87,7 +87,7 @@ namespace MediConnect.Admin
         protected void CreateProduct()
         {
             con.Open();
-            string insertQry = "INSERT INTO [products] (name, product_uid, slug, description, quantity, price, expiry_date, image, category_id, manufacturer_id, deleted_at, created_at, updated_at) VALUES (@name, @product_uid, @slug, @description, @quantity, @price, @expiry_date, @image, @category_id, @manufacturer_id, @deleted_at, @created_at, @updated_at)";
+            string insertQry = "INSERT INTO [products] (name, product_uid, slug, description, quantity, price, manufacturing_date, expiry_date, image, category_id, manufacturer_id, deleted_at, created_at, updated_at) VALUES (@name, @product_uid, @slug, @description, @quantity, @price, @manufacturing_date, @expiry_date, @image, @category_id, @manufacturer_id, @deleted_at, @created_at, @updated_at)";
             SqlCommand insertCmd = new SqlCommand(insertQry, con);
             insertCmd.Parameters.AddWithValue("@name", ProductTitle.Text.ToString());
             insertCmd.Parameters.AddWithValue("@product_uid", ProductUID.Text.ToString());
@@ -97,6 +97,7 @@ namespace MediConnect.Admin
             insertCmd.Parameters.AddWithValue("@price", Price.Text.ToString());
             try
             {
+                insertCmd.Parameters.AddWithValue("@manufacturing_date", TextFormatter.ConvertTextToDate(ExpiryDate.Text.ToString()));
                 insertCmd.Parameters.AddWithValue("@expiry_date", TextFormatter.ConvertTextToDate(ExpiryDate.Text.ToString()));
             }
             catch (Exception ex)

@@ -45,6 +45,10 @@
                     <asp:TextBox CssClass="form-control" ID="Quantity" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
+                    <label for="ManufacturingDate">ManufacturingDate</label>
+                    <asp:TextBox CssClass="form-control" ID="ManufacturingDate" runat="server" placeholder="dd-MM-yyyy"></asp:TextBox>
+                </div>
+                <div class="form-group">
                     <label for="ExpiryDate">Expiry Date</label>
                     <asp:TextBox CssClass="form-control" ID="ExpiryDate" runat="server" placeholder="dd-MM-yyyy"></asp:TextBox>
                 </div>

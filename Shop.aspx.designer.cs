@@ -15,21 +15,21 @@ namespace MediConnect
     {
 
         /// <summary>
-        /// LatestProductsLiteral control.
+        /// LatestProductListView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LatestProductsLiteral;
+        protected global::System.Web.UI.WebControls.ListView LatestProductListView;
 
         /// <summary>
-        /// AllProductsLiteral control.
+        /// ProductListView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal AllProductsLiteral;
+        protected global::System.Web.UI.WebControls.ListView ProductListView;
     }
 }

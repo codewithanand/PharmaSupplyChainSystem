@@ -26,7 +26,7 @@ namespace MediConnect
                     }
                     catch (Exception ex)
                     {
-                        Response.Write(ex.ToString());
+                        Response.Write(ex.Message);
                     }
                 }
             }

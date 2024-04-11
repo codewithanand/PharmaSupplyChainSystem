@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <h4>Caring for better life</h4>
+                    <h4>Caring for better supply</h4>
                     <h1>Streamlined supply for health</h1>
                     <p>Enables real-time tracking of pharmaceutical products and provide valuable analytics for informed decision-making.</p>
                     <a href="#" class="template-btn mt-3">Know more</a>
