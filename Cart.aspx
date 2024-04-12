@@ -36,20 +36,16 @@
                 <div class="col-md-3">
                     <h3>Total <asp:Label ID="TotalCartItems" runat="server" Text="0"></asp:Label> item(s)</h3>
                     <hr />
-                    <div class="d-flex justify-content-between mb-3">
+                    <div class="d-flex justify-content-between">
                         <strong>Subtotal</strong>
                         <span>₹ <asp:Label ID="SubTotalPrice" runat="server" Text="0"></asp:Label></span>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <strong>GST</strong>
-                        <span>₹ <asp:Label ID="GSTValue" runat="server" Text="0"></asp:Label></span>
                     </div>
                     <hr />
                     <div class="d-flex justify-content-between mb-3">
                         <strong>Total</strong>
                         <span>₹ <asp:Label ID="TotalPrice" runat="server" Text="0"></asp:Label></span>
                     </div>
-                    <a href="Orders.aspx" class="btn btn-dark">Place Order</a>
+                    <asp:LinkButton ID="PlaceOrderBtn" runat="server" OnClick="PlaceOrderBtn_Click" CssClass="btn btn-dark">Place Order</asp:LinkButton>
                 </div>
             </div>
         </div>

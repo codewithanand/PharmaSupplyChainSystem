@@ -1154,6 +1154,7 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="DeleteFromCart.aspx.cs">
       <DependentUpon>DeleteFromCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
