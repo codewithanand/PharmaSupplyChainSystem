@@ -7,65 +7,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MediConnect
+namespace MediConnect.Admin
 {
 
 
-    public partial class Cart
+    public partial class CheckpointAdd
     {
 
         /// <summary>
-        /// CartListView control.
+        /// OwnerDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView CartListView;
+        protected global::System.Web.UI.WebControls.DropDownList OwnerDropDownList;
 
         /// <summary>
-        /// AddressesRadioButtonList control.
+        /// OrderId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList AddressesRadioButtonList;
+        protected global::System.Web.UI.WebControls.TextBox OrderId;
 
         /// <summary>
-        /// TotalCartItems control.
+        /// CheckpointName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalCartItems;
+        protected global::System.Web.UI.WebControls.TextBox CheckpointName;
 
         /// <summary>
-        /// SubTotalPrice control.
+        /// ExpectedDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SubTotalPrice;
+        protected global::System.Web.UI.WebControls.TextBox ExpectedDate;
 
         /// <summary>
-        /// TotalPrice control.
+        /// CreateCheckpointBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalPrice;
+        protected global::System.Web.UI.WebControls.Button CreateCheckpointBtn;
 
         /// <summary>
-        /// PlaceOrderBtn control.
+        /// ErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton PlaceOrderBtn;
+        protected global::System.Web.UI.WebControls.Label ErrorMessage;
+
+        /// <summary>
+        /// SuccessMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SuccessMessage;
     }
 }

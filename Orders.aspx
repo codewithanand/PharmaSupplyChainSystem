@@ -18,17 +18,17 @@
                                     <h3 class="mb-3"><%# Eval("name") %></h3>
                                     <div class="mb-2">
                                         Quantity:
-                                <span class="badge badge-dark"><%# Eval("quantity") %></span>
+                                <span><%# Eval("quantity") %></span>
                                     </div>
                                     <div class="mb-2">
                                         Payment Status:
-                                        <span class="badge badge-success">
+                                        <span>
                                             <%# Convert.ToBoolean(Eval("payment_status")) ? "Paid" : "Not Paid" %>
                                         </span>
                                     </div>
                                     <div class="mb-3">
                                         Delivery Status:
-                                        <span class="badge badge-danger">
+                                        <span>
                                             <%# Convert.ToBoolean(Eval("delivery_status")) ? "Delivered" : "Not Delivered" %>
                                         </span>
                                     </div>

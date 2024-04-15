@@ -22,6 +22,7 @@ namespace MediConnect
                 {
                     try
                     {
+                        BindAddresses();
                         BindCartListView();
                     }
                     catch (Exception ex)
@@ -30,6 +31,24 @@ namespace MediConnect
                     }
                 }
             }
+        }
+
+        protected void BindAddresses()
+        {
+            string userId = Session["user_id"].ToString();
+
+            DataSet ds = GetAddresses(userId);
+            DataTable dt = ds.Tables[0];
+            dt.Columns.Add("CustomerAddress", typeof(string));
+            foreach(DataRow row in dt.Rows)
+            {
+                string address = row["name"] + "\n" + row["contact"] + "\n" + row["street_address"] + ", " + row["city"] + ", " + row["state"] + ", " + row["country"] + "\nPincode=" + row["pincode"];
+                row["CustomerAddress"] = address;
+            }
+            AddressesRadioButtonList.DataSource = dt;
+            AddressesRadioButtonList.DataTextField = "CustomerAddress";
+            AddressesRadioButtonList.DataValueField = "id";
+            AddressesRadioButtonList.DataBind();
         }
 
         protected void BindCartListView()
@@ -67,8 +86,9 @@ namespace MediConnect
             {
                 float subTotalPrice = Convert.ToSingle(row["price"]) * Convert.ToInt32(row["product_quantity"]);
                 string transactionId = TokenGenerator.Token(10);
+                string addressId = AddressesRadioButtonList.SelectedValue.ToString();
 
-                OrderController.store(userId, row["product_id"].ToString(), row["manufacturer_id"].ToString(), row["product_quantity"].ToString(), subTotalPrice.ToString(), transactionId);
+                OrderController.store(userId, row["product_id"].ToString(), addressId, row["manufacturer_id"].ToString(), row["product_quantity"].ToString(), subTotalPrice.ToString(), transactionId);
 
                 CartController.destroy(userId, Convert.ToInt32(row["id"]));
             }
@@ -80,6 +100,19 @@ namespace MediConnect
         {
             con.Open();
             string getQry = "SELECT * FROM [carts] INNER JOIN [products] ON carts.product_id=products.id WHERE user_id=@user_id ORDER BY carts.id DESC";
+            SqlCommand getCmd = new SqlCommand(getQry, con);
+            getCmd.Parameters.AddWithValue("@user_id", userId);
+            SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            con.Close();
+            return ds;
+        }
+
+        protected DataSet GetAddresses(string userId)
+        {
+            con.Open();
+            string getQry = "SELECT * FROM [addresses] WHERE user_id=@user_id";
             SqlCommand getCmd = new SqlCommand(getQry, con);
             getCmd.Parameters.AddWithValue("@user_id", userId);
             SqlDataAdapter adapter = new SqlDataAdapter(getCmd);

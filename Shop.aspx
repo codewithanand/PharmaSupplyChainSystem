@@ -7,7 +7,7 @@
     <!-- Feature Area Starts -->
     <section class="feature-area section-padding">
         <div class="container mb-3">
-            <h2 class="mb-3">Latest Products</h2>
+            <h3 class="mb-3 border-bottom">Latest Products</h3>
             <div class="row">
 
                 <asp:ListView ID="LatestProductListView" runat="server">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="container">
-            <h2 class="mb-3">All Products</h2>
+            <h3 class="mb-3 border-bottom">All Products</h3>
             <div class="row">
 
                 <asp:ListView ID="ProductListView" runat="server">

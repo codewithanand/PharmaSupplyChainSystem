@@ -129,6 +129,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="Checkpoints.aspx">
+                            <i class="mdi mdi-share-variant menu-icon"></i>
+                            <span class="menu-title">Checkpoints</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="Trackings.aspx">
                             <i class="mdi mdi-share-variant menu-icon"></i>
                             <span class="menu-title">Trackings</span>

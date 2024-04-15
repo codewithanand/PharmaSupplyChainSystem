@@ -12,10 +12,10 @@ namespace MediConnect.Admin
         {
             if (!IsPostBack)
             {
-                //if (RoleMiddleware.Role() != 1)
-                //{
-                //    Response.Redirect("~/Unauthorized.aspx");
-                //}
+                if (RoleMiddleware.Role() != 1)
+                {
+                    Response.Redirect("~/Unauthorized.aspx");
+                }
                 CategoryRowLiteral.Text = string.Empty;
                 try
                 {
