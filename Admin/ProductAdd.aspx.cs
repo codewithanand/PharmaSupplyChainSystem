@@ -22,14 +22,6 @@ namespace MediConnect.Admin
                 try
                 {
                     BindSuppliers();
-                }
-                catch (Exception ex)
-                {
-                    ErrorMessage.Text = ex.Message.ToString();
-                    SuccessMessage.Text = string.Empty;
-                }
-                try
-                {
                     BindCategories();
                 }
                 catch (Exception ex)
@@ -87,10 +79,9 @@ namespace MediConnect.Admin
         protected void CreateProduct()
         {
             con.Open();
-            string insertQry = "INSERT INTO [products] (name, product_uid, slug, description, quantity, price, manufacturing_date, expiry_date, image, category_id, manufacturer_id, deleted_at, created_at, updated_at) VALUES (@name, @product_uid, @slug, @description, @quantity, @price, @manufacturing_date, @expiry_date, @image, @category_id, @manufacturer_id, @deleted_at, @created_at, @updated_at)";
+            string insertQry = "INSERT INTO [products] (name, slug, description, quantity, price, manufacturing_date, expiry_date, image, category_id, manufacturer_id, deleted_at, created_at, updated_at) VALUES (@name, @slug, @description, @quantity, @price, @manufacturing_date, @expiry_date, @image, @category_id, @manufacturer_id, @deleted_at, @created_at, @updated_at)";
             SqlCommand insertCmd = new SqlCommand(insertQry, con);
             insertCmd.Parameters.AddWithValue("@name", ProductTitle.Text.ToString());
-            insertCmd.Parameters.AddWithValue("@product_uid", ProductUID.Text.ToString());
             insertCmd.Parameters.AddWithValue("@slug", TextFormatter.Slugify(ProductTitle.Text.ToString()));
             insertCmd.Parameters.AddWithValue("@description", Description.Text.ToString());
             insertCmd.Parameters.AddWithValue("@quantity", Quantity.Text.ToString());

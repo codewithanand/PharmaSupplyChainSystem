@@ -50,10 +50,10 @@
                                                         <a href="#" class="dropdown-item preview-item py-3">
                                                             View
                                                         </a>
-                                                        <a href="#" class="dropdown-item preview-item py-3">
+                                                        <a href="OrderCheckpoints.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">
                                                             Checkpoints
                                                         </a>
-                                                        <a href="#" class="dropdown-item preview-item py-3">
+                                                        <a href="OrderTrack.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">
                                                             Track
                                                         </a>
                                                     </div>

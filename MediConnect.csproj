@@ -73,8 +73,10 @@
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\CategoryAdd.aspx" />
     <Content Include="Admin\CheckpointAdd.aspx" />
+    <Content Include="Admin\CheckpointDelete.aspx" />
     <Content Include="Admin\ManufacturerAdd.aspx" />
     <Content Include="Admin\Manufacturers.aspx" />
+    <Content Include="Admin\OrderCheckpoints.aspx" />
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\OrderTrack.aspx" />
     <Content Include="Admin\ProductAdd.aspx" />
@@ -1079,6 +1081,13 @@
     <Compile Include="Admin\CheckpointAdd.aspx.designer.cs">
       <DependentUpon>CheckpointAdd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\CheckpointDelete.aspx.cs">
+      <DependentUpon>CheckpointDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CheckpointDelete.aspx.designer.cs">
+      <DependentUpon>CheckpointDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1099,6 +1108,13 @@
     </Compile>
     <Compile Include="Admin\Manufacturers.aspx.designer.cs">
       <DependentUpon>Manufacturers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderCheckpoints.aspx.cs">
+      <DependentUpon>OrderCheckpoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderCheckpoints.aspx.designer.cs">
+      <DependentUpon>OrderCheckpoints.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>

@@ -1,12 +1,7 @@
 ﻿using MediConnect.Utils;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MediConnect.Admin
 {
@@ -15,20 +10,43 @@ namespace MediConnect.Admin
         SqlConnection con = Connection.Connect();
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindCheckpointListView();
+            if (!IsPostBack)
+            {
+                if (RoleMiddleware.Role() != 1)
+                {
+                    Response.Redirect("~/Unauthorized.aspx");
+                }
+                try
+                {
+                    BindCheckpointListView();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message.ToString());
+                }
+            }
         }
 
         protected void BindCheckpointListView()
         {
-            con.Open();
-            string getQry = "SELECT * FROM [checkpoints] WHERE order_id='1002'";
-            SqlCommand getCmd = new SqlCommand(getQry, con);
-            SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            CheckpointListView.DataSource = ds;
-            CheckpointListView.DataBind();
-            con.Close();
+            try
+            {
+                string orderId = Request.QueryString["orderId"].ToString();
+                con.Open();
+                string getQry = "SELECT * FROM [checkpoints] WHERE order_id=@order_id";
+                SqlCommand getCmd = new SqlCommand(getQry, con);
+                getCmd.Parameters.AddWithValue("@order_id", orderId);
+                SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                CheckpointListView.DataSource = ds;
+                CheckpointListView.DataBind();
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
