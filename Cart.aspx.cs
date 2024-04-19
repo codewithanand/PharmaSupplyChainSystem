@@ -91,9 +91,22 @@ namespace MediConnect
                 OrderController.store(userId, row["product_id"].ToString(), addressId, row["manufacturer_id"].ToString(), row["product_quantity"].ToString(), subTotalPrice.ToString(), transactionId);
 
                 CartController.destroy(userId, Convert.ToInt32(row["id"]));
+
+                UpdateProductQuantity(row["product_id"].ToString(), Convert.ToInt32(row["product_quantity"]));
             }
 
             Response.Redirect("Orders.aspx");
+        }
+
+        protected void UpdateProductQuantity(string productId, int quantity)
+        {
+            con.Open();
+            string updateQry = "UPDATE [products] SET quantity=quantity-@quantity WHERE id=@id";
+            SqlCommand updateCmd = new SqlCommand(updateQry, con);
+            updateCmd.Parameters.AddWithValue("@id", productId);
+            updateCmd.Parameters.AddWithValue("@quantity", quantity);
+            updateCmd.ExecuteNonQuery();
+            con.Close();
         }
 
         protected DataSet GetCarts(string userId)

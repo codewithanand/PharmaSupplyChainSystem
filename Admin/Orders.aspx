@@ -47,7 +47,7 @@
                                                         <i class="typcn typcn-cog-outline"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="accountDropdown">
-                                                        <a href="#" class="dropdown-item preview-item py-3">
+                                                        <a href="OrderDetails.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">
                                                             View
                                                         </a>
                                                         <a href="OrderCheckpoints.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">

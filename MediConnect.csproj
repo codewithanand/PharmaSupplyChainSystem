@@ -77,10 +77,12 @@
     <Content Include="Admin\ManufacturerAdd.aspx" />
     <Content Include="Admin\Manufacturers.aspx" />
     <Content Include="Admin\OrderCheckpoints.aspx" />
+    <Content Include="Admin\OrderDetails.aspx" />
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\OrderTrack.aspx" />
     <Content Include="Admin\ProductAdd.aspx" />
     <Content Include="Admin\Products.aspx" />
+    <Content Include="Admin\Transporters.aspx" />
     <Content Include="Admin\UserAdd.aspx" />
     <Content Include="Admin\UserDelete.aspx" />
     <Content Include="Admin\UserEdit.aspx" />
@@ -1116,6 +1118,13 @@
     <Compile Include="Admin\OrderCheckpoints.aspx.designer.cs">
       <DependentUpon>OrderCheckpoints.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1143,6 +1152,13 @@
     </Compile>
     <Compile Include="Admin\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transporters.aspx.cs">
+      <DependentUpon>Transporters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Transporters.aspx.designer.cs">
+      <DependentUpon>Transporters.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserAdd.aspx.cs">
       <DependentUpon>UserAdd.aspx</DependentUpon>
@@ -1290,6 +1306,7 @@
     <Compile Include="Utils\MailServiceProvider.cs" />
     <Compile Include="Utils\MailTemplates.cs" />
     <Compile Include="Utils\MyCryptography.cs" />
+    <Compile Include="Utils\ProductNumberGenerator.cs" />
     <Compile Include="Utils\RoleMiddleware.cs" />
     <Compile Include="Utils\TextFormatter.cs" />
     <Compile Include="Utils\TokenGenerator.cs" />

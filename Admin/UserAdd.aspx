@@ -41,6 +41,7 @@
                     <asp:ListItem Value="3">Manufacturer</asp:ListItem>
                     <asp:ListItem Value="4">Wholesaler</asp:ListItem>
                     <asp:ListItem Value="5">Distributor</asp:ListItem>
+                    <asp:ListItem Value="6">Agent</asp:ListItem>
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator CssClass="text-danger text-small" ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required" ControlToValidate="UserType" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>

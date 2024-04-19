@@ -1,7 +1,6 @@
 ﻿using MediConnect.Utils;
 using System;
 using System.Data.SqlClient;
-using System.Xml.Linq;
 
 namespace MediConnect.Admin
 {
