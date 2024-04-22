@@ -1,11 +1,7 @@
 ﻿using MediConnect.Utils;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MediConnect.Admin
 {
@@ -74,6 +70,7 @@ namespace MediConnect.Admin
                 insertCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);
                 insertCmd.ExecuteNonQuery();
                 con.Close();
+                Response.Redirect("Transporters.aspx");
             }
             catch(Exception ex)
             {

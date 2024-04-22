@@ -11,43 +11,61 @@ namespace MediConnect.Admin
 {
 
 
-    public partial class OrderCheckpoints
+    public partial class TransportAssign
     {
 
         /// <summary>
-        /// CheckpointsListView control.
+        /// OrderId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView CheckpointsListView;
+        protected global::System.Web.UI.WebControls.TextBox OrderId;
 
         /// <summary>
-        /// CheckpointName control.
+        /// TransporterDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CheckpointName;
+        protected global::System.Web.UI.WebControls.DropDownList TransporterDropDownList;
 
         /// <summary>
-        /// ExpectedDate control.
+        /// Source control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ExpectedDate;
+        protected global::System.Web.UI.WebControls.TextBox Source;
 
         /// <summary>
-        /// CreateCheckpointBtn control.
+        /// Destination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateCheckpointBtn;
+        protected global::System.Web.UI.WebControls.TextBox Destination;
+
+        /// <summary>
+        /// DispatchDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DispatchDate;
+
+        /// <summary>
+        /// AssignButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AssignButton;
     }
 }

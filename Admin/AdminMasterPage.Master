@@ -105,9 +105,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Manufacturers.aspx">
+                        <a class="nav-link" href="Customers.aspx">
                             <i class="mdi mdi-flask-outline menu-icon"></i>
-                            <span class="menu-title">Manufacturers</span>
+                            <span class="menu-title">Customers</span>
                         </a>
                     </li>
                     <li class="nav-item">

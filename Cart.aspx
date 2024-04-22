@@ -47,9 +47,12 @@
                         <div class="col-12">
                             <h3>Shipping Addresses</h3>
                             <hr />
+                            <asp:PlaceHolder ID="AddAddressPlaceHolder" runat="server">
+                                <a href="Account.aspx" class="btn btn-outline-dark">Add an address</a>
+                            </asp:PlaceHolder>
                             <asp:RadioButtonList ID="AddressesRadioButtonList" runat="server">
-                                
                             </asp:RadioButtonList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="AddressesRadioButtonList" ErrorMessage="Please select an address" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="row">

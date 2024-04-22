@@ -6,15 +6,15 @@ namespace MediConnect.Controllers
 {
     public class OrderController
     {
-        public static void store(string userId, string productId, string addressId, string manufacturerId, string quantity, string totalPrice, string transactionId)
+        public static void store(string userId, string productId, string addressId, string ownerId, string quantity, string totalPrice, string transactionId)
         {
             SqlConnection con = Connection.Connect();
             con.Open();
-            string insertQry = "INSERT INTO [orders] (user_id, address_id, manufacturer_id, product_id, quantity, total_price, transaction_id, payment_mode, payment_status, order_date, delivery_date, is_delivered, created_at, updated_at) VALUES (@user_id, @address_id, @manufacturer_id, @product_id, @quantity, @total_price, @transaction_id, @payment_mode, @payment_status, @order_date, @delivery_date, @is_delivered, @created_at, @updated_at)";
+            string insertQry = "INSERT INTO [orders] (user_id, address_id, owner_id, product_id, quantity, total_price, transaction_id, payment_mode, payment_status, order_date, delivery_date, is_delivered, created_at, updated_at) VALUES (@user_id, @address_id, @owner_id, @product_id, @quantity, @total_price, @transaction_id, @payment_mode, @payment_status, @order_date, @delivery_date, @is_delivered, @created_at, @updated_at)";
             SqlCommand insertCmd = new SqlCommand(insertQry, con);
             insertCmd.Parameters.AddWithValue("@user_id", userId);
             insertCmd.Parameters.AddWithValue("@address_id", addressId);
-            insertCmd.Parameters.AddWithValue("@manufacturer_id", manufacturerId);
+            insertCmd.Parameters.AddWithValue("@owner_id", ownerId);
             insertCmd.Parameters.AddWithValue("@product_id", productId);
             insertCmd.Parameters.AddWithValue("@quantity", quantity);
             insertCmd.Parameters.AddWithValue("@total_price", totalPrice);
@@ -32,7 +32,7 @@ namespace MediConnect.Controllers
             int orderId = GetLastOrderId();
             for(int i=1; i <= Convert.ToInt32(quantity); i++)
             {
-                string productUid = ProductNumberGenerator.Generate(Convert.ToInt32(manufacturerId));
+                string productUid = ProductNumberGenerator.Generate(Convert.ToInt32(ownerId));
                 StoreUniqueProduct(orderId, productId, productUid);
             }
         }

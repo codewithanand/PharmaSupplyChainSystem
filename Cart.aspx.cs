@@ -18,17 +18,15 @@ namespace MediConnect
                 {
                     Response.Redirect("Login.aspx");
                 }
-                else
+                AddAddressPlaceHolder.Visible = false;
+                try
                 {
-                    try
-                    {
-                        BindAddresses();
-                        BindCartListView();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
+                    BindAddresses();
+                    BindCartListView();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }
@@ -38,17 +36,24 @@ namespace MediConnect
             string userId = Session["user_id"].ToString();
 
             DataSet ds = GetAddresses(userId);
-            DataTable dt = ds.Tables[0];
-            dt.Columns.Add("CustomerAddress", typeof(string));
-            foreach(DataRow row in dt.Rows)
+            if (ds.Tables[0].Rows.Count > 0)
             {
-                string address = row["name"] + "\n" + row["contact"] + "\n" + row["street_address"] + ", " + row["city"] + ", " + row["state"] + ", " + row["country"] + "\nPincode=" + row["pincode"];
-                row["CustomerAddress"] = address;
+                DataTable dt = ds.Tables[0];
+                dt.Columns.Add("CustomerAddress", typeof(string));
+                foreach(DataRow row in dt.Rows)
+                {
+                    string address = row["name"] + "\n" + row["contact"] + "\n" + row["street_address"] + ", " + row["city"] + ", " + row["state"] + ", " + row["country"] + "\nPincode=" + row["pincode"];
+                    row["CustomerAddress"] = address;
+                }
+                AddressesRadioButtonList.DataSource = dt;
+                AddressesRadioButtonList.DataTextField = "CustomerAddress";
+                AddressesRadioButtonList.DataValueField = "id";
+                AddressesRadioButtonList.DataBind();
             }
-            AddressesRadioButtonList.DataSource = dt;
-            AddressesRadioButtonList.DataTextField = "CustomerAddress";
-            AddressesRadioButtonList.DataValueField = "id";
-            AddressesRadioButtonList.DataBind();
+            else
+            {
+                AddAddressPlaceHolder.Visible = true;
+            }
         }
 
         protected void BindCartListView()
@@ -88,7 +93,7 @@ namespace MediConnect
                 string transactionId = TokenGenerator.Token(10);
                 string addressId = AddressesRadioButtonList.SelectedValue.ToString();
 
-                OrderController.store(userId, row["product_id"].ToString(), addressId, row["manufacturer_id"].ToString(), row["product_quantity"].ToString(), subTotalPrice.ToString(), transactionId);
+                OrderController.store(userId, row["product_id"].ToString(), addressId, row["owner_id"].ToString(), row["product_quantity"].ToString(), subTotalPrice.ToString(), transactionId);
 
                 CartController.destroy(userId, Convert.ToInt32(row["id"]));
 
@@ -101,10 +106,11 @@ namespace MediConnect
         protected void UpdateProductQuantity(string productId, int quantity)
         {
             con.Open();
-            string updateQry = "UPDATE [products] SET quantity=quantity-@quantity WHERE id=@id";
+            string updateQry = "UPDATE [products] SET quantity=quantity-@quantity, updated_at=@updated_at WHERE id=@id";
             SqlCommand updateCmd = new SqlCommand(updateQry, con);
             updateCmd.Parameters.AddWithValue("@id", productId);
             updateCmd.Parameters.AddWithValue("@quantity", quantity);
+            updateCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);
             updateCmd.ExecuteNonQuery();
             con.Close();
         }

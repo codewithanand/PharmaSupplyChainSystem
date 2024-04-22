@@ -19,7 +19,6 @@ namespace MediConnect.Admin
                 try
                 {
                     BindCheckpointsListView();
-                    BindOwners();
                 }
                 catch(Exception ex) {
                     Response.Write(ex.Message.ToString());
@@ -42,25 +41,13 @@ namespace MediConnect.Admin
             con.Close();
         }
 
-        protected void BindOwners()
-        {
-            con.Open();
-            string getQry = "SELECT * FROM [manufacturers] WHERE deleted_at IS NULL";
-            SqlCommand getCmd = new SqlCommand(getQry, con);
-            SqlDataReader reader = getCmd.ExecuteReader();
-            OwnerDropDownList.DataSource = reader;
-            OwnerDropDownList.Items.Clear();
-            OwnerDropDownList.DataTextField = "name";
-            OwnerDropDownList.DataValueField = "id";
-            OwnerDropDownList.DataBind();
-            con.Close();
-        }
 
         protected void CreateCheckpointBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 string orderId = Request.QueryString["orderId"].ToString();
+                string ownerId = Request.QueryString["ownerId"].ToString();
                 con.Open();
                 string insertQry = "INSERT INTO [checkpoints] (name, address, remarks, order_id, owner_id, expected_date, delivery_date, is_delivered, created_at, updated_at) VALUES (@name, @address, @remarks, @order_id, @owner_id, @expected_date, @delivery_date, @is_delivered, @created_at, @updated_at)";
                 SqlCommand insertCmd = new SqlCommand(insertQry, con);
@@ -68,8 +55,8 @@ namespace MediConnect.Admin
                 insertCmd.Parameters.AddWithValue("@address", DBNull.Value);
                 insertCmd.Parameters.AddWithValue("@remarks", DBNull.Value);
                 insertCmd.Parameters.AddWithValue("@order_id", orderId);
-                insertCmd.Parameters.AddWithValue("@owner_id", OwnerDropDownList.SelectedValue);
-                insertCmd.Parameters.AddWithValue("@expected_date", TextFormatter.ConvertTextToDate(ExpectedDate.Text.ToString()));
+                insertCmd.Parameters.AddWithValue("@owner_id", ownerId);
+                insertCmd.Parameters.AddWithValue("@expected_date", ExpectedDate.Text.ToString());
                 insertCmd.Parameters.AddWithValue("@delivery_date", DBNull.Value);
                 insertCmd.Parameters.AddWithValue("@is_delivered", 0);
                 insertCmd.Parameters.AddWithValue("@created_at", DateTime.Now);
@@ -77,7 +64,7 @@ namespace MediConnect.Admin
                 insertCmd.ExecuteNonQuery();
                 con.Close();
 
-                Response.Redirect("OrderCheckpoints.aspx?orderId=" + orderId);
+                Response.Redirect("OrderCheckpoints.aspx?orderId=" + orderId + "&ownerId=" + ownerId);
             }
             catch (Exception ex)
             {

@@ -24,6 +24,15 @@ namespace MediConnect
         protected global::System.Web.UI.WebControls.ListView CartListView;
 
         /// <summary>
+        /// AddAddressPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AddAddressPlaceHolder;
+
+        /// <summary>
         /// AddressesRadioButtonList control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace MediConnect
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList AddressesRadioButtonList;
+
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// TotalCartItems control.

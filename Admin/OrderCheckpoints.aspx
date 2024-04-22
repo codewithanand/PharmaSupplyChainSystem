@@ -39,18 +39,14 @@
                     <div class="p-3 bg-gradient-warning">
                         <div class="row">
                             <div class="col-md-4 mb-3">
-                                <label for="OwnerDropDownList">Owner</label>
-                                <asp:DropDownList CssClass="form-control" ID="OwnerDropDownList" runat="server"></asp:DropDownList>
-                            </div>
-                            <div class="col-md-4 mb-3">
                                 <label for="CheckpointName">Checkpoint Name</label>
                                 <asp:TextBox CssClass="form-control" ID="CheckpointName" runat="server"></asp:TextBox>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="ExpectedDate">Expected Date</label>
-                                <asp:TextBox CssClass="form-control" ID="ExpectedDate" runat="server" placeholder="dd-MM-yyyy"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="ExpectedDate" runat="server" TextMode="Date"></asp:TextBox>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-4 mb-3 align-content-end">
                                 <asp:Button CssClass="btn btn-primary" ID="CreateCheckpointBtn" OnClick="CreateCheckpointBtn_Click" runat="server" Text="Create Checkpoint" />
                             </div>
                         </div>

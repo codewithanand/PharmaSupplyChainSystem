@@ -32,7 +32,7 @@ namespace MediConnect.Admin
 
         protected void BindUserInformation(string orderId)
         {
-            string getQry = "SELECT addresses.name AS user_name, addresses.contact AS contact, addresses.street_address AS street_address, addresses.country AS country, addresses.city AS city, addresses.state AS state, addresses.pincode AS pincode, orders.order_date AS order_date, orders.delivery_date AS is_delivered FROM [orders] INNER JOIN [users] ON orders.user_id=users.id INNER JOIN [addresses] ON orders.address_id=addresses.id WHERE orders.id=@id";
+            string getQry = "SELECT addresses.name AS user_name, addresses.contact AS contact, addresses.street_address AS street_address, addresses.country AS country, addresses.city AS city, addresses.state AS state, addresses.pincode AS pincode, orders.order_date AS order_date, orders.delivery_date AS delivery_date FROM [orders] INNER JOIN [users] ON orders.user_id=users.id INNER JOIN [addresses] ON orders.address_id=addresses.id WHERE orders.id=@id";
             DataSet ds = GetDataSet(getQry, orderId);
             UserName.Text = ds.Tables[0].Rows[0]["user_name"].ToString();
             Contact.Text = ds.Tables[0].Rows[0]["contact"].ToString();

@@ -41,11 +41,12 @@ namespace MediConnect
             if(IsCorrectActivationCode(activation_code, email))
             {
                 con.Open();
-                string updateQuery = "UPDATE [users] SET activation_code=@activation_code, email_verified_at=@email_verified_at, is_active=@is_active WHERE email=@email";
+                string updateQuery = "UPDATE [users] SET activation_code=@activation_code, email_verified_at=@email_verified_at, is_active=@is_active, updated_at=@updated_at WHERE email=@email";
                 SqlCommand updateCmd = new SqlCommand(updateQuery, con);
                 updateCmd.Parameters.AddWithValue("@email", email);
                 updateCmd.Parameters.AddWithValue("@activation_code", DBNull.Value);
                 updateCmd.Parameters.AddWithValue("@email_verified_at", DateTime.Now);
+                updateCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);
                 updateCmd.Parameters.AddWithValue("@is_active", 1);
                 updateCmd.ExecuteNonQuery();
                 con.Close();

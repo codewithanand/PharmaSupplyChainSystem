@@ -1,12 +1,7 @@
 ﻿using MediConnect.Utils;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MediConnect.Admin
 {
@@ -42,7 +37,7 @@ namespace MediConnect.Admin
         protected DataSet GetOrders()
         {
             con.Open();
-            string getQry = "SELECT orders.id AS id, products.name AS product, orders.created_at AS order_date, manufacturers.name AS owner, orders.is_delivered AS is_delivered, addresses.city AS destination FROM [orders] INNER JOIN [products] ON products.id=orders.product_id INNER JOIN [manufacturers] ON manufacturers.id=orders.manufacturer_id INNER JOIN [addresses] ON addresses.id=orders.address_id ORDER BY orders.id DESC";
+            string getQry = "SELECT orders.id AS id, manufacturers.id AS owner, products.name AS product, orders.created_at AS order_date, manufacturers.name AS owner, orders.is_delivered AS is_delivered, addresses.city AS destination FROM [orders] INNER JOIN [products] ON products.id=orders.product_id INNER JOIN [manufacturers] ON manufacturers.id=orders.manufacturer_id INNER JOIN [addresses] ON addresses.id=orders.address_id ORDER BY orders.id DESC";
             SqlCommand getCmd = new SqlCommand(getQry, con);
             SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
             DataSet ds = new DataSet();

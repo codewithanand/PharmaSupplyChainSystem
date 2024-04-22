@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Manufacturers.aspx.cs" Inherits="MediConnect.Admin.Manufacturers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="MediConnect.Admin.Customers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Manufacturers</title>
+    <title>Customers</title>
     <link href="../assets/admin/datatable/dataTable.bootstrap4.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Manufacturers
+    Customers
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,22 +15,30 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex flex-row justify-content-between mb-3">
-                        <span class="h4">Manufacturers</span>
-                        <a class="btn btn-primary btn-icon-text btn-sm" href="ManufacturerAdd.aspx"><i class="mdi mdi-database-plus btn-icon-prepend"></i>Add New</a>
+                        <span class="h4">Customers</span>
+                        <a class="btn btn-primary btn-icon-text btn-sm" href="CustomersAdd.aspx"><i class="mdi mdi-database-plus btn-icon-prepend"></i>Add New</a>
                     </div>
                     <div class="table-responsive">
-                        <table id="manufacturerDataTable" class="table table-striped mb-3">
+                        <table id="customerDataTable" class="table table-striped mb-3">
                             <thead>
                                 <tr>
-                                    <th>Manufacturer</th>
+                                    <th>Customer</th>
                                     <th>Address</th>
                                     <th>Contact</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                                <asp:Literal ID="ManufacturerRowLiteral" runat="server"></asp:Literal>
+                                <asp:ListView ID="CustomerListView" runat="server">
+                                    <ItemTemplate>
+                                        <tr>
+                                            <td><%# Eval("name") %></td>
+                                            <td><%# Eval("address") %></td>
+                                            <td><%# Eval("contact") %></td>
+                                            <td></td>
+                                        </tr>
+                                    </ItemTemplate>
+                                </asp:ListView>
                             </tbody>
                         </table>
                     </div>
@@ -46,7 +54,7 @@
     <script src="../assets/admin/datatable/dataTable.bootstrap4.js"></script>
     <script>
         $(document).ready(function () {
-            $('#manufacturerDataTable').DataTable();
+            $('#customerDataTable').DataTable();
         });
     </script>
 </asp:Content>

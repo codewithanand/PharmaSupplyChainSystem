@@ -17,16 +17,12 @@
                     <a class="btn btn-primary btn-icon-text btn-sm" href="Products.aspx"><i class="mdi mdi-database btn-icon-prepend"></i>View Products</a>
                 </div>
                 <div class="form-group">
-                    <label for="Owner">Supplier</label>
-                    <asp:DropDownList CssClass="form-control" ID="Supplier" runat="server"></asp:DropDownList>
+                    <label for="Owner">Owner</label>
+                    <asp:DropDownList CssClass="form-control" ID="OwnerDropDownList" runat="server"></asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label for="Category">Category</label>
                     <asp:DropDownList CssClass="form-control" ID="Category" runat="server"></asp:DropDownList>
-                </div>
-                <div class="form-group">
-                    <label for="Category">Product UID</label>
-                    <asp:TextBox CssClass="form-control" ID="ProductUID" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="ProductTitle">Title</label>
@@ -46,11 +42,11 @@
                 </div>
                 <div class="form-group">
                     <label for="ManufacturingDate">ManufacturingDate</label>
-                    <asp:TextBox CssClass="form-control" ID="ManufacturingDate" runat="server" placeholder="dd-MM-yyyy"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control" ID="ManufacturingDate" runat="server" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="ExpiryDate">Expiry Date</label>
-                    <asp:TextBox CssClass="form-control" ID="ExpiryDate" runat="server" placeholder="dd-MM-yyyy"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control" ID="ExpiryDate" runat="server" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label for="Image">Cover Image</label>

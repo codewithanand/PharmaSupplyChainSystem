@@ -68,20 +68,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Account.aspx" />
     <Content Include="ActivateAccount.aspx" />
     <Content Include="AddToCart.aspx" />
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\CategoryAdd.aspx" />
     <Content Include="Admin\CheckpointAdd.aspx" />
     <Content Include="Admin\CheckpointDelete.aspx" />
-    <Content Include="Admin\ManufacturerAdd.aspx" />
-    <Content Include="Admin\Manufacturers.aspx" />
+    <Content Include="Admin\Customers.aspx" />
+    <Content Include="Admin\CustomersAdd.aspx" />
     <Content Include="Admin\OrderCheckpoints.aspx" />
     <Content Include="Admin\OrderDetails.aspx" />
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\OrderTrack.aspx" />
     <Content Include="Admin\ProductAdd.aspx" />
     <Content Include="Admin\Products.aspx" />
+    <Content Include="Admin\TransportAssign.aspx" />
     <Content Include="Admin\Transporters.aspx" />
     <Content Include="Admin\UserAdd.aspx" />
     <Content Include="Admin\UserDelete.aspx" />
@@ -1041,6 +1043,13 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ActivateAccount.aspx.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1090,26 +1099,26 @@
     <Compile Include="Admin\CheckpointDelete.aspx.designer.cs">
       <DependentUpon>CheckpointDelete.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomersAdd.aspx.cs">
+      <DependentUpon>CustomersAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomersAdd.aspx.designer.cs">
+      <DependentUpon>CustomersAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\ManufacturerAdd.aspx.cs">
-      <DependentUpon>ManufacturerAdd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\ManufacturerAdd.aspx.designer.cs">
-      <DependentUpon>ManufacturerAdd.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Manufacturers.aspx.cs">
-      <DependentUpon>Manufacturers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Manufacturers.aspx.designer.cs">
-      <DependentUpon>Manufacturers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\OrderCheckpoints.aspx.cs">
       <DependentUpon>OrderCheckpoints.aspx</DependentUpon>
@@ -1152,6 +1161,13 @@
     </Compile>
     <Compile Include="Admin\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TransportAssign.aspx.cs">
+      <DependentUpon>TransportAssign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TransportAssign.aspx.designer.cs">
+      <DependentUpon>TransportAssign.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Transporters.aspx.cs">
       <DependentUpon>Transporters.aspx</DependentUpon>

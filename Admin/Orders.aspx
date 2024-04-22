@@ -27,7 +27,6 @@
                                     <th>Product</th>
                                     <th>Destination</th>
                                     <th>Order Date</th>
-                                    <th>Owner</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
@@ -36,26 +35,24 @@
                                     <ItemTemplate>
                                         <tr>
                                             <td><%# Eval("id") %></td>
-                                            <td><%# Convert.ToBoolean(Eval("is_delivered")) ? "Delivered" : "Not Delivered" %></td>
+                                            <td>
+                                                <span class="badge text-white <%# Convert.ToBoolean(Eval("is_delivered")) ? "bg-success" : "bg-danger" %>">
+                                                <%# Convert.ToBoolean(Eval("is_delivered")) ? "Delivered" : "Not Delivered" %>
+                                                </span>
+                                            </td>
                                             <td><%# Eval("product") %></td>
                                             <td><%# Eval("destination") %></td>
                                             <td><%# Eval("order_date") %></td>
-                                            <td><%# Eval("owner") %></td>
                                             <td>
                                                 <div class="dropdown">
                                                     <a class="btn btn-outline-dark dropdown-toggle" href="#" data-toggle="dropdown">
                                                         <i class="typcn typcn-cog-outline"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="accountDropdown">
-                                                        <a href="OrderDetails.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">
-                                                            View
-                                                        </a>
-                                                        <a href="OrderCheckpoints.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">
-                                                            Checkpoints
-                                                        </a>
-                                                        <a href="OrderTrack.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3">
-                                                            Track
-                                                        </a>
+                                                        <a href="OrderDetails.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3"> View </a>
+                                                        <a href="OrderTrack.aspx?orderId=<%# Eval("id") %>" class="dropdown-item preview-item py-3"> Track </a>
+                                                        <a href="OrderCheckpoints.aspx?orderId=<%# Eval("id") %>&ownerId=<%# Eval("owner") %>" class="dropdown-item preview-item py-3"> Checkpoints </a>
+                                                        <a href="TransportAssign.aspx?orderId=<%# Eval("id") %>&ownerId=<%# Eval("owner") %>" class="dropdown-item preview-item py-3"> Assign Transports </a>
                                                     </div>
                                                 </div>
                                             </td>

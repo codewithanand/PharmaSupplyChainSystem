@@ -76,7 +76,7 @@
                         <%
                             if (MediConnect.Utils.AuthMiddleware.CheckAuth())
                             {
-                                Response.Write("<li><a href=\"Cart.aspx\"><i class=\"mdi mdi-cart-outline\"></i> Cart</a></li>");
+                                Response.Write("<li><a href=\"Cart.aspx\"><i class=\"mdi mdi-cart-outline\"></i> Cart </a></li>");
                             }
                         %>
                         <li class="menu-has-children"><a href="#"><i class="mdi mdi-account-circle"></i></a>

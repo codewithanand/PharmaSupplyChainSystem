@@ -7,119 +7,110 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MediConnect.Admin
+namespace MediConnect
 {
 
 
-    public partial class ProductAdd
+    public partial class Account
     {
 
         /// <summary>
-        /// OwnerDropDownList control.
+        /// UserNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList OwnerDropDownList;
+        protected global::System.Web.UI.WebControls.Label UserNameLabel;
 
         /// <summary>
-        /// Category control.
+        /// EmailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Category;
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
 
         /// <summary>
-        /// ProductTitle control.
+        /// NameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ProductTitle;
+        protected global::System.Web.UI.WebControls.TextBox NameTextBox;
 
         /// <summary>
-        /// Description control.
+        /// ContactTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Description;
+        protected global::System.Web.UI.WebControls.TextBox ContactTextBox;
 
         /// <summary>
-        /// Price control.
+        /// StreetTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Price;
+        protected global::System.Web.UI.WebControls.TextBox StreetTextBox;
 
         /// <summary>
-        /// Quantity control.
+        /// CountryTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantity;
+        protected global::System.Web.UI.WebControls.TextBox CountryTextBox;
 
         /// <summary>
-        /// ManufacturingDate control.
+        /// StateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ManufacturingDate;
+        protected global::System.Web.UI.WebControls.TextBox StateTextBox;
 
         /// <summary>
-        /// ExpiryDate control.
+        /// CityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ExpiryDate;
+        protected global::System.Web.UI.WebControls.TextBox CityTextBox;
 
         /// <summary>
-        /// Image control.
+        /// PincodeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload Image;
+        protected global::System.Web.UI.WebControls.TextBox PincodeTextBox;
 
         /// <summary>
-        /// CreateProductButton control.
+        /// AddAddressButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateProductButton;
+        protected global::System.Web.UI.WebControls.Button AddAddressButton;
 
         /// <summary>
-        /// ErrorMessage control.
+        /// UpdateAddressButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorMessage;
-
-        /// <summary>
-        /// SuccessMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SuccessMessage;
+        protected global::System.Web.UI.WebControls.Button UpdateAddressButton;
     }
 }

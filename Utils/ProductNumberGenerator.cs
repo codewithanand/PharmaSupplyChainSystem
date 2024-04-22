@@ -9,12 +9,12 @@ namespace MediConnect.Utils
     {
         private static int productCounter = 1;
 
-        public static string Generate(int manufacturerId)
+        public static string Generate(int ownerId)
         {
-            string manufaturerIdString = manufacturerId.ToString("0000");
+            string ownerIdString = ownerId.ToString("0000");
             string productNumberString = productCounter.ToString("0000");
 
-            string productNumber = $"MC{manufaturerIdString}{productNumberString}";
+            string productNumber = $"MC{ownerIdString}{productNumberString}";
             productCounter++;
             return productNumber;
         }

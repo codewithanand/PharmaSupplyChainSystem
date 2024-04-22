@@ -1,7 +1,6 @@
 ﻿using MediConnect.Utils;
 using System;
 using System.Data.SqlClient;
-using System.Web;
 
 namespace MediConnect.Controllers
 {

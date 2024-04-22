@@ -1,5 +1,4 @@
-﻿using MediConnect.Controllers;
-using MediConnect.Utils;
+﻿using MediConnect.Utils;
 using System;
 using System.Data;
 using System.Data.SqlClient;

@@ -31,7 +31,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <asp:Literal ID="ProductRowLiteral" runat="server"></asp:Literal>
+                                <asp:ListView ID="ProductListView" runat="server">
+                                    <ItemTemplate>
+                                        <tr>
+                                            <td><%# Eval("name") %></td>
+                                            <td><%# Eval("category") %></td>
+                                            <td><%# Eval("owner") %></td>
+                                            <td><%# Eval("quantity") %></td>
+                                            <td><%# Eval("price") %></td>
+                                            <td></td>
+                                        </tr>
+                                    </ItemTemplate>
+                                </asp:ListView>
                             </tbody>
                         </table>
                     </div>
