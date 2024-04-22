@@ -30,7 +30,7 @@
                                         <label class="form-control"><%# String.Format("{0:dd-MM-yyyy}", Eval("expected_date")) %></label>
                                     </div>
                                     <div class="col-md-4 d-flex align-items-center justify-content-end">
-                                        <a onclick="return confirm('Are you sure want to delete this checkpoint?')" href="CheckpointDelete.aspx?orderId=<%# Eval("order_id") %>&checkpointId=<%# Eval("id") %>" class="btn btn-danger">Delete</a>
+                                        <a onclick="return confirm('Are you sure want to delete this checkpoint?')" href="CheckpointDelete.aspx?orderId=<%# Eval("order_id") %>&checkpointId=<%# Eval("id") %>&ownerId=<%# Eval("owner_id") %>" class="btn btn-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>

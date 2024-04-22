@@ -15,7 +15,7 @@ namespace MediConnect.Admin
                 {
                     Response.Redirect("~/Unauthorized.aspx");
                 }
-                if (Request.QueryString["orderId"] == null || Request.QueryString["checkpointId"] == null)
+                if (Request.QueryString["orderId"] == null || Request.QueryString["checkpointId"] == null || Request.QueryString["ownerId"] == null)
                 {
                     Response.Redirect("Orders.aspx");
                 }
@@ -23,12 +23,13 @@ namespace MediConnect.Admin
                 {
                     string orderId = Request.QueryString["orderId"].ToString();
                     string checkpointId = Request.QueryString["checkpointId"].ToString();
-                    DeleteCheckpoint(checkpointId, orderId);
+                    string ownerId = Request.QueryString["ownerId"].ToString();
+                    DeleteCheckpoint(checkpointId, orderId, ownerId);
                 }
             }
         }
 
-        protected void DeleteCheckpoint(string checkpointId, string orderId)
+        protected void DeleteCheckpoint(string checkpointId, string orderId, string ownerId)
         {
             try
             {
@@ -39,7 +40,7 @@ namespace MediConnect.Admin
                 deleteCmd.ExecuteNonQuery();
                 con.Close();
 
-                Response.Redirect("OrderCheckpoints.aspx?orderId=" + orderId);
+                Response.Redirect("OrderCheckpoints.aspx?orderId=" + orderId + "&ownerId=" + ownerId);
             }
             catch (Exception ex)
             {

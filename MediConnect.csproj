@@ -73,7 +73,6 @@
     <Content Include="AddToCart.aspx" />
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\CategoryAdd.aspx" />
-    <Content Include="Admin\CheckpointAdd.aspx" />
     <Content Include="Admin\CheckpointDelete.aspx" />
     <Content Include="Admin\Customers.aspx" />
     <Content Include="Admin\CustomersAdd.aspx" />
@@ -84,6 +83,7 @@
     <Content Include="Admin\ProductAdd.aspx" />
     <Content Include="Admin\Products.aspx" />
     <Content Include="Admin\TransportAssign.aspx" />
+    <Content Include="Admin\TransporterDelete.aspx" />
     <Content Include="Admin\Transporters.aspx" />
     <Content Include="Admin\UserAdd.aspx" />
     <Content Include="Admin\UserDelete.aspx" />
@@ -1085,13 +1085,6 @@
     <Compile Include="Admin\CategoryAdd.aspx.designer.cs">
       <DependentUpon>CategoryAdd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CheckpointAdd.aspx.cs">
-      <DependentUpon>CheckpointAdd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\CheckpointAdd.aspx.designer.cs">
-      <DependentUpon>CheckpointAdd.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\CheckpointDelete.aspx.cs">
       <DependentUpon>CheckpointDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1168,6 +1161,13 @@
     </Compile>
     <Compile Include="Admin\TransportAssign.aspx.designer.cs">
       <DependentUpon>TransportAssign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TransporterDelete.aspx.cs">
+      <DependentUpon>TransporterDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TransporterDelete.aspx.designer.cs">
+      <DependentUpon>TransporterDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Transporters.aspx.cs">
       <DependentUpon>Transporters.aspx</DependentUpon>

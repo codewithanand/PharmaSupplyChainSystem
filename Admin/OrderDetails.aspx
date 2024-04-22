@@ -100,7 +100,7 @@
                                             <ItemTemplate>
                                                 <tr>
                                                     <td>#<%# Eval("product_uid") %></td>
-                                                    <td><%# Eval("manufacturer") %></td>
+                                                    <td><%# Eval("owner") %></td>
                                                     <td><%# Eval("manufacturing_date") %></td>
                                                     <td><%# Eval("expiry_date") %></td>
                                                 </tr>

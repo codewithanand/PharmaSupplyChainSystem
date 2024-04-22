@@ -54,7 +54,7 @@ namespace MediConnect.Admin
 
         protected void BindItemInformations(string orderId)
         {
-            string getQry = "SELECT order_products.product_uid AS product_uid, manufacturers.name AS manufacturer, products.manufacturing_date AS manufacturing_date, products.expiry_date AS expiry_date FROM [orders] INNER JOIN [products] ON orders.product_id=products.id INNER JOIN [manufacturers] ON orders.manufacturer_id=manufacturers.id INNER JOIN [order_products] ON orders.id=order_products.order_id WHERE orders.id=@id";
+            string getQry = "SELECT order_products.product_uid AS product_uid, customers.name AS owner, products.manufacturing_date AS manufacturing_date, products.expiry_date AS expiry_date FROM [orders] INNER JOIN [products] ON orders.product_id=products.id INNER JOIN [customers] ON orders.owner_id=customers.id INNER JOIN [order_products] ON orders.id=order_products.order_id WHERE orders.id=@id";
             DataSet ds = GetDataSet(getQry, orderId);
             ItemInfoListView.DataSource = ds;
             ItemInfoListView.DataBind();

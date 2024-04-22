@@ -31,7 +31,7 @@ namespace MediConnect.Admin
         protected void BindTransporterListView()
         {
             con.Open();
-            string getQry = "SELECT transporters.id AS id, transporters.name AS name, transporters.vehicle_no AS vehicle_no, transporters.contact AS contact, users.name AS owner FROM [transporters] INNER JOIN [users] ON transporters.owner_id=users.id WHERE transporters.deleted_at IS NULL";
+            string getQry = "SELECT transporters.id AS id, transporters.name AS name, transporters.vehicle_no AS vehicle_no, transporters.contact AS contact, customers.name AS owner FROM [transporters] INNER JOIN [customers] ON transporters.owner_id=customers.id WHERE transporters.deleted_at IS NULL";
             SqlCommand getCmd = new SqlCommand(getQry, con);
             SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
             DataSet ds = new DataSet();
@@ -44,7 +44,7 @@ namespace MediConnect.Admin
         protected void BindOwners()
         {
             con.Open();
-            string getQry = "SELECT * FROM [users] WHERE user_type != 1 AND user_type != 0";
+            string getQry = "SELECT * FROM [customers]";
             SqlCommand getCmd = new SqlCommand(getQry, con);
             SqlDataReader reader = getCmd.ExecuteReader();
             OwnerDropDownList.DataSource = reader;

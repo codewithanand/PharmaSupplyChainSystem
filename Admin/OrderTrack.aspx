@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <div class="d-flex flex-row justify-content-between mb-3">
                         <span class="h4">Order Tracking</span>
-                        <a class="btn btn-primary btn-icon-text btn-sm" href="ProductAdd.aspx"><i class="mdi mdi-database-plus btn-icon-prepend"></i>View Orders</a>
+                        <a class="btn btn-primary btn-icon-text btn-sm" href="Orders.aspx"><i class="mdi mdi-database-plus btn-icon-prepend"></i>View Orders</a>
                     </div>
                     <div class="container pt-3">
                         <div class="row">

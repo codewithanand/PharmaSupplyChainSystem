@@ -62,7 +62,7 @@
                                             <td><%# Eval("vehicle_no") %></td>
                                             <td><%# Eval("contact") %></td>
                                             <td>
-                                                <a href="TransporterDelete.aspx" class="btn btn-danger">Delete</a>
+                                                <a onclick="return confirm('Are you sure want to delete this transporter?')" href="TransporterDelete.aspx?transporterId=<%# Eval("id") %>" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     </ItemTemplate>
