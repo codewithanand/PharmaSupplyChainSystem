@@ -44,14 +44,14 @@ namespace MediConnect.Admin
         protected void InsertTransporter(string orderId)
         {
             con.Open();
-            string insertQry = "INSERT INTO [order_transporters] (order_id, transporter_id, soure, destination, dispatch_date, deliver_date, created_at, updated_at) VALUES (@order_id, @transporter_id, @soure, @destination, @dispatch_date, @deliver_date, @created_at, @updated_at)";
+            string insertQry = "INSERT INTO [order_transporters] (order_id, transporter_id, source, destination, dispatch_date, deliver_date, created_at, updated_at) VALUES (@order_id, @transporter_id, @source, @destination, @dispatch_date, @deliver_date, @created_at, @updated_at)";
             SqlCommand insertCmd = new SqlCommand(insertQry, con);
             insertCmd.Parameters.AddWithValue("@order_id", OrderId.Text.ToString());
             insertCmd.Parameters.AddWithValue("@transporter_id", TransporterDropDownList.SelectedValue);
-            insertCmd.Parameters.AddWithValue("@soure", Source.Text.ToString());
+            insertCmd.Parameters.AddWithValue("@source", Source.Text.ToString());
             insertCmd.Parameters.AddWithValue("@destination", Destination.Text.ToString());
-            insertCmd.Parameters.AddWithValue("@dispatch_date", TextFormatter.ConvertTextToDate(DispatchDate.Text.ToString()));
-            insertCmd.Parameters.AddWithValue("@deliver_date", DBNull.Value);
+            insertCmd.Parameters.AddWithValue("@dispatch_date",Convert.ToDateTime(DispatchDate.Text).ToString("yyyy-MM-dd"));
+            insertCmd.Parameters.AddWithValue("@deliver_date", Convert.ToDateTime(DeliveryDate.Text).ToString("yyyy-MM-dd"));
             insertCmd.Parameters.AddWithValue("@created_at", DateTime.Now);
             insertCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);
             insertCmd.ExecuteNonQuery();
@@ -62,7 +62,7 @@ namespace MediConnect.Admin
         {
             string ownerId = Request.QueryString["ownerId"].ToString();
             con.Open();
-            string getQry = "SELECT * FROM [transporters] WHERE owner_id=@owner_id";
+            string getQry = "SELECT * FROM [transporters] WHERE owner_id=@owner_id AND deleted_at IS NULL";
             SqlCommand getCmd = new SqlCommand(getQry, con);
             getCmd.Parameters.AddWithValue("@owner_id", ownerId);
             SqlDataReader reader = getCmd.ExecuteReader();

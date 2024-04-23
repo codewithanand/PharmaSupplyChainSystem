@@ -32,12 +32,16 @@
                                 <asp:TextBox ID="Source" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group mt-3">
+                                <label>Dispatch Date</label>
+                                <asp:TextBox ID="DispatchDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                            </div>
+                            <div class="form-group mt-3">
                                 <label>Destination Place</label>
                                 <asp:TextBox ID="Destination" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group mt-3">
-                                <label>Dispatch Date</label>
-                                <asp:TextBox ID="DispatchDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                <label>Delivery Date</label>
+                                <asp:TextBox ID="DeliveryDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                             </div>
                             <div class="form-group mt-3">
                                 <asp:Button ID="AssignButton" OnClick="AssignButton_Click" CssClass="btn btn-primary" runat="server" Text="Assign Transporter" />

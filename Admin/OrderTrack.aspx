@@ -40,34 +40,63 @@
                     </div>
                     <div class="container pt-3">
                         <div class="row">
-                            <asp:ListView ID="CheckpointListView" runat="server">
-                                <ItemTemplate>
-                                    <div class="col-md-12 checkpoint-container mb-4">
-                                        <div class="rounded-pill checkpoint 
-                                            <%# Convert.ToBoolean(Eval("is_delivered")) ? 
-                                                "active" : 
-                                                string.Empty %>"
-                                        ></div>
-                                        <div class="pl-5">
-                                            <h4><%# Eval("name") %> <a href="#" class="text-info"><i class="mdi mdi-eye"></i></a></h4>
-                                            <small class="
-                                                <%# Convert.ToBoolean(Eval("is_delivered")) ? 
-                                                    "text-success" : 
-                                                    "text-danger" %>"
-                                            >
-                                                <%# Convert.ToBoolean(Eval("is_delivered")) ? 
-                                                        "Delivered" : 
-                                                        "Expected delivery" %> 
-                                                on 
-                                                <%# Convert.ToBoolean(Eval("is_delivered")) ? 
-                                                    String.Format("{0:dd-MM-yyyy}", Eval("delivery_date")) : 
-                                                    String.Format("{0:dd-MM-yyyy}", Eval("expected_date")) %>
-                                            </small>
+                            <div class="col-sm-12 col-md-6">
+                                <asp:ListView ID="CheckpointListView" runat="server">
+                                    <ItemTemplate>
+                                        <div class="row">
+                                            <div class="col-md-12 checkpoint-container mb-4">
+                                                <div class="rounded-pill checkpoint 
+                                                    <%# Convert.ToBoolean(Eval("is_delivered")) ? 
+                                                        "active" : 
+                                                        string.Empty %>"
+                                                ></div>
+                                                <div class="pl-5">
+                                                    <h4><%# Eval("name") %> <a href="#" class="text-info"><i class="mdi mdi-eye"></i></a></h4>
+                                                    <small class="
+                                                        <%# Convert.ToBoolean(Eval("is_delivered")) ? 
+                                                            "text-success" : 
+                                                            "text-danger" %>"
+                                                    >
+                                                        <%# Convert.ToBoolean(Eval("is_delivered")) ? 
+                                                                "Delivered" : 
+                                                                "Expected delivery" %> 
+                                                        on 
+                                                        <%# Convert.ToBoolean(Eval("is_delivered")) ? 
+                                                            String.Format("{0:dd-MM-yyyy}", Eval("delivery_date")) : 
+                                                            String.Format("{0:dd-MM-yyyy}", Eval("expected_date")) %>
+                                                    </small>
                                             
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </ItemTemplate>
-                            </asp:ListView>
+                                    </ItemTemplate>
+                                </asp:ListView>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="row">
+                                    <asp:ListView ID="TransportersListView" runat="server">
+                                        <ItemTemplate>
+                                            <div class="col-md-12 mb-3 border rounded p-3">
+                                                <p>
+                                                    <strong><%# Eval("name") %></strong>
+                                                    <span><%# Eval("vehicle_no") %></span>
+                                                </p>
+                                                <p> 
+                                                    Dispatching from
+                                                    <strong><%# Eval("source") %></strong>
+                                                    on <%# Eval("dispatch_date") %>
+                                                    
+                                                </p>
+                                                <p>
+                                                    Arrriving
+                                                    <strong><%# Eval("destination") %></strong>
+                                                    on <%# Eval("delivery_date") %>
+                                                </p>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:ListView>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
