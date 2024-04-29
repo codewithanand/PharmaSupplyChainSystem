@@ -3,10 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-4 animated slideInDown">My Orders</h1>
+        </div>
+    </div>
     <section class="patient-area section-padding">
         <div class="container pt-5">
             <div class="row">
-                <h1 class="mb-5">My Orders</h1>
                 <asp:ListView ID="OrderListView" runat="server">
                     <ItemTemplate>
                         <div class="container border-bottom mb-3 p-2">

@@ -3,8 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="patient-area section-padding">
-        <div class="container">
+    <div class="container-fluid pt-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        
+    </div>
+    <section class="container-fluid py-5">
+        <div class="container py-5">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-top text-center">

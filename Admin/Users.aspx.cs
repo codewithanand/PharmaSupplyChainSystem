@@ -65,6 +65,10 @@ namespace MediConnect.Admin
                 {
                     UserRowLiteral.Text += "<td><span class=\"badge bg-warning text-white\">distributor</span></td>";
                 }
+                else if (user_type == 6)
+                {
+                    UserRowLiteral.Text += "<td><span class=\"badge bg-info text-white\">agent</span></td>";
+                }
                 else
                 {
                     UserRowLiteral.Text += "<td><span class=\"badge bg-warning text-white\">consumer</span></td>";

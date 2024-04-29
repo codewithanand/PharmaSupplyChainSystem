@@ -3,7 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="patient-area section-padding">
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-4 animated slideInDown">Activate Account</h1>
+        </div>
+    </div>
+    <div class="container-fluid">
         <div class="container">
             <asp:PlaceHolder ID="PlaceHolder1" runat="server">
                 <div class="row">
@@ -63,5 +68,5 @@
                 </div>
             </asp:PlaceHolder>
         </div>
-    </section>
+    </div>
 </asp:Content>

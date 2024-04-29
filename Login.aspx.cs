@@ -86,7 +86,7 @@ namespace MediConnect
                     Response.Redirect("Admin/DistributorDashboard.aspx");
                     break;
                 case 6:
-                    Response.Redirect("Admin/AgentDashboard.aspx");
+                    Response.Redirect("Agent.aspx");
                     break;
                 default:
                     Response.Redirect("Home.aspx");

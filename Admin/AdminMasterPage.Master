@@ -134,6 +134,12 @@
                             <span class="menu-title">Transporters</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Agents.aspx">
+                            <i class="mdi mdi-car menu-icon"></i>
+                            <span class="menu-title">Agents</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- partial -->

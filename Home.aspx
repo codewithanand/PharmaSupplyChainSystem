@@ -3,382 +3,235 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Banner Area Starts -->
-    <section class="banner-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <h4>Caring for better supply</h4>
-                    <h1>Streamlined supply for health</h1>
-                    <p>Enables real-time tracking of pharmaceutical products and provide valuable analytics for informed decision-making.</p>
-                    <a href="#" class="template-btn mt-3">Know more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Banner Area End -->
-
-    <!-- Feature Area Starts -->
-    <section class="feature-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-feature text-center item-padding">
-                        <img src="assets/client/images/feature1.png" alt="">
-                        <h3>Real-time
-                            <br />
-                            Tracking</h3>
-                        <p class="pt-3">Showcasing a live tracking feature that allows users to monitor the movement of pharmaceuticals in real-time, ensuring transparency and security.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-feature text-center item-padding mt-4 mt-md-0">
-                        <img src="assets/client/images/feature2.png" alt="">
-                        <h3>Inventory Management</h3>
-                        <p class="pt-3">Highlighting an inventory management system that helps pharmaceutical companies optimize stock levels, reduce wastage, and ensure timely availability of products.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-feature text-center item-padding mt-4 mt-lg-0">
-                        <img src="assets/client/images/feature3.png" alt="">
-                        <h3>Compliance and Regulation</h3>
-                        <p class="pt-3">Featuring tools that help users stay compliant with pharmaceutical regulations, ensuring that all supply chain activities meet industry standards.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-feature text-center item-padding mt-4 mt-lg-0">
-                        <img src="assets/client/images/feature4.png" alt="">
-                        <h3>Data Analytics and Reporting</h3>
-                        <p class="pt-3">Providing insights into supply chain performance through advanced data analytics and reporting tools, enabling informed decision-making and continuous improvement.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Feature Area End -->
-
-    <!-- Welcome Area Starts -->
-    <section class="welcome-area section-padding3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 align-self-center">
-                    <div class="welcome-img">
-                        <img src="assets/client/images/welcome.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="welcome-text mt-5 mt-lg-0">
-                        <h2>About</h2>
-                        <p class="pt-3">MediConnect is a cutting-edge pharmaceutical Supply Chain Management (SCM) system designed to revolutionize the way pharmaceutical products are sourced, managed, and delivered.</p>
-                        <p>Our platform leverages the latest technologies to ensure efficiency, transparency, and compliance across the entire supply chain.</p>
-                        <a href="#" class="template-btn mt-3">learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Welcome Area End -->
-
-    <!-- Department Area Starts -->
-    <section class="department-area section-padding4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Popular department</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="department-slider owl-carousel">
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/client/images/department1.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="#"><i class="fa fa-stethoscope"></i></a>
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="assets/client/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-lg-8">
+                                    <p class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
+                                        Welcome to MediConnect
+                               
+                                    </p>
+                                    <h1 class="display-1 mb-4 animated slideInDown">Streamlined supply for health
+                                </h1>
+                                    <a href="Register.aspx" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
                                 </div>
                             </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>Medication</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
                         </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/client/images/department2.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="assets/client/img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-lg-7">
+                                    <p class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">
+                                        Welcome to MediConnect
+                               
+                                    </p>
+                                    <h1 class="display-1 mb-4 animated slideInDown">Caring for better supply</h1>
+                                    <a href="Register.aspx" class="btn btn-primary py-3 px-5 animated slideInDown">Explore More</a>
                                 </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>Medical Supplies</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
-                        </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/client/images/department3.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>Vaccines</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
-                        </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/client/images/department1.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>Health Suppliments</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
-                        </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/client/images/department1.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.html"><i class="fa fa-stethoscope"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>Specialty Medication</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </section>
-    <!-- Department Area Starts -->
-
-    <!-- Patient Area Starts -->
-    <section class="patient-area section-padding">
+    </div>
+    <!-- Carousel End -->
+    
+    <!-- Features Start -->
+    <div class="container-xxl feature py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Customers are saying</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="single-patient mb-4">
-                        <img src="assets/client/images/patient1.png" alt="">
-                        <h3>daren jhonson</h3>
-                        <h5>hp specialist</h5>
-                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
-                    </div>
-                    <div class="single-patient">
-                        <img src="assets/client/images/patient2.png" alt="">
-                        <h3>black heiden</h3>
-                        <h5>hp specialist</h5>
-                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-1 align-self-center">
-                    <div class="appointment-form text-center mt-5 mt-lg-0">
-                        <h3 class="mb-5">Contact us</h3>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email'" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="datepicker" placeholder="Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date'" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" cols="20" rows="7" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
-                        </div>
-                        <a href="#" class="template-btn">appointment now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Patient Area Starts -->
-
-    <!-- Specialist Area Starts -->
-    <section class="specialist-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Our specialish</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor mb-4 mb-lg-0">
-                        <div class="doctor-img">
-                            <img src="assets/client/images/doctor1.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>ethel davis</h3>
-                                <h6>sr. faculty data science</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor mb-4 mb-lg-0">
-                        <div class="doctor-img">
-                            <img src="assets/client/images/doctor2.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>dand mories</h3>
-                                <h6>sr. faculty plastic surgery</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor mb-4 mb-sm-0">
-                        <div class="doctor-img">
-                            <img src="assets/client/images/doctor3.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>align board</h3>
-                                <h6>sr. faculty data science</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor">
-                        <div class="doctor-img">
-                            <img src="assets/client/images/doctor4.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>jeson limit</h3>
-                                <h6>sr. faculty plastic surgery</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Specialist Area Starts -->
-
-    <!-- Hotline Area Starts -->
-    <section class="hotline-area text-center section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Customer Support</h2>
-                    <span>(+01) – 256 567 550</span>
-                    <p class="pt-3">
-                        We provide 24/7 customer support. Please feel free to contact us
-                        <br>
-                        for emergency case.
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Why Choosing Us!</p>
+                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
+                    <p class="mb-4">
+                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+               
                     </p>
+                    <a class="btn btn-primary py-3 px-5" href="">Explore More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="feature-box border rounded p-4">
+                                        <i class="fa fa-check fa-3x text-primary mb-3"></i>
+                                        <h4 class="mb-3">Real-time Tracking</h4>
+                                        <p class="mb-3">
+                                            Showcasing a live tracking feature that allows users to monitor the movement of pharmaceuticals in real-time, ensuring transparency and security.
+                                        </p>
+                                        <a class="fw-semi-bold" href="">Read More <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                    <div class="feature-box border rounded p-4">
+                                        <i class="fa fa-check fa-3x text-primary mb-3"></i>
+                                        <h4 class="mb-3">Inventory Management</h4>
+                                        <p class="mb-3">
+                                            Highlighting an inventory management system that helps pharmaceutical companies optimize stock levels, reduce wastage, and ensure timely availability of products.
+                                   
+                                        </p>
+                                        <a class="fw-semi-bold" href="">Read More <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                            <div class="feature-box border rounded p-4">
+                                <i class="fa fa-check fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Compliance and Regulation</h4>
+                                <p class="mb-3">
+                                    Featuring tools that help users stay compliant with pharmaceutical regulations, ensuring that all supply chain activities meet industry standards.
+                           
+                                </p>
+                                <a class="fw-semi-bold" href="">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Hotline Area End -->
-
-    <!-- News Area Starts -->
-    <section class="news-area section-padding">
+    </div>
+    <!-- Features End -->
+    
+    <!-- Callback Start -->
+    <div class="container-fluid callback my-5 pt-5">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="bg-white border rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">
+                                Get In Touch
+                       
+                            </p>
+                            <h1 class="display-5 mb-5">Request A Call-Back</h1>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <asp:TextBox CssClass="form-control" ID="Name" runat="server" placeholder="Your Name"></asp:TextBox>
+                                    <label for="Name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <asp:TextBox CssClass="form-control" ID="Email" runat="server" placeholder="Your Email"></asp:TextBox>
+                                    <label for="Email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <asp:TextBox CssClass="form-control" ID="Mobile" runat="server" placeholder="Your Mobile"></asp:TextBox>
+                                    <label for="Mobile">Your Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <asp:TextBox CssClass="form-control" ID="Subject" runat="server" placeholder="Subject"></asp:TextBox>
+                                    <label for="Subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <asp:TextBox CssClass="form-control" ID="Message" runat="server" placeholder="Leave a message here" TextMode="MultiLine" style="height: 100px"></asp:TextBox>
+                                    <label for="Message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <asp:Button CssClass="btn btn-primary w-100 py-3" ID="SubmitButton" runat="server" Text="Submit Now" OnClick="SubmitButton_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Our Customers</h2>
-                        <p>Look what our customer says about us</p>
-                    </div>
-                </div>
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Testimonial</p>
+                <h1 class="display-5 mb-5">What Our Clients Say!</h1>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <img src="assets/client/images/news1.jpg" alt="" class="img-fluid">
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-item">
+                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
+                        <div class="btn-square bg-white border rounded-circle">
+                            <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        <div class="news-text">
-                            <h3><a href="#">XYZ Company</a></h3>
-                            <p>Elementum libero hac leo integer.</p>
-                        </div>
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                    lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+               
                     </div>
+                    <img class="rounded-circle mb-3" src="assets/client/img/testimonial-1.jpg" alt="">
+                    <h4>Client Name</h4>
+                    <span>Profession</span>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <img src="assets/client/images/news1.jpg" alt="" class="img-fluid">
+                <div class="testimonial-item">
+                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
+                        <div class="btn-square bg-white border rounded-circle">
+                            <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        <div class="news-text">
-                            <h3><a href="#">XYZ Company</a></h3>
-                            <p>Elementum libero hac leo integer.</p>
-                        </div>
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                    lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+               
                     </div>
+                    <img class="rounded-circle mb-3" src="assets/client/img/testimonial-2.jpg" alt="">
+                    <h4>Client Name</h4>
+                    <span>Profession</span>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <img src="assets/client/images/news1.jpg" alt="" class="img-fluid">
+                <div class="testimonial-item">
+                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
+                        <div class="btn-square bg-white border rounded-circle">
+                            <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        <div class="news-text">
-                            <h3><a href="#">XYZ Company</a></h3>
-                            <p>Elementum libero hac leo integer.</p>
-                        </div>
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                    lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+               
                     </div>
+                    <img class="rounded-circle mb-3" src="assets/client/img/testimonial-3.jpg" alt="">
+                    <h4>Client Name</h4>
+                    <span>Profession</span>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
+                        <div class="btn-square bg-white border rounded-circle">
+                            <i class="fa fa-quote-right fa-2x text-primary"></i>
+                        </div>
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                    lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+               
+                    </div>
+                    <img class="rounded-circle mb-3" src="assets/client/img/testimonial-4.jpg" alt="">
+                    <h4>Client Name</h4>
+                    <span>Profession</span>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- News Area Starts -->
+    </div>
+    <!-- Testimonial End -->
 </asp:Content>

@@ -4,14 +4,15 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="patient-area section-padding">
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-4 animated slideInDown">My Cart</h1>
+        </div>
+    </div>
+    <div class="container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="mb-5">
-                        <h1 style="font-size: 2.5rem !important;" class="pb-3">Shopping Cart</h1>
-                    </div>
-
                     <asp:ListView ID="CartListView" runat="server">
                         <EmptyItemTemplate>
                             <div class="container shadow mb-3 p-5">
@@ -74,7 +75,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </asp:Content>
 
 

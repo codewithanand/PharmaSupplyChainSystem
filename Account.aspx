@@ -4,8 +4,13 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-4 animated slideInDown">My Account</h1>
+        </div>
+    </div>
     <!-- Welcome Area Starts -->
-    <section class="welcome-area section-padding">
+    <div class="container-fluid">
         <div class="container p-3">
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -25,10 +30,10 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-12">
-                            <a href="Cart.aspx" class="text-decoration-none text-white d-flex align-items-center h3 card p-3 bg-info"><i class="mdi mdi-cart"></i> Cart</a>
+                            <a href="Cart.aspx" class="text-decoration-none text-dark d-flex align-items-center gap-2 h3 card p-3 bg-light"><i class="fas fa-shopping-cart"></i>Cart</a>
                         </div>
                         <div class="col-12 mt-3">
-                            <a href="Orders.aspx" class="text-decoration-none text-white d-flex align-items-center h3 card p-3 bg-info"><i class="mdi mdi-shopping"></i> Orders</a>
+                            <a href="Orders.aspx" class="text-decoration-none text-white d-flex align-items-center gap-2 h3 card p-3 bg-info"><i class="fas fa-shopping-bag"></i>Orders</a>
                         </div>
                     </div>
                 </div>
@@ -71,13 +76,13 @@
                             </div>
                             <div class="form-group mt-3">
                                 <asp:Button CssClass="btn btn-dark" ID="AddAddressButton" runat="server" Text="Add Address" OnClick="AddAddressButton_Click" />
-                                <asp:Button CssClass="btn btn-dark" ID="UpdateAddressButton" runat="server" Text="Update Address" OnClick="UpdateAddressButton_Click"  />
+                                <asp:Button CssClass="btn btn-dark" ID="UpdateAddressButton" runat="server" Text="Update Address" OnClick="UpdateAddressButton_Click" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- Patient Area Starts -->
 </asp:Content>

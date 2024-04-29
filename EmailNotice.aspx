@@ -3,15 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="patient-area section-padding">
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Verify Email</h2>
-                    </div>
-                </div>
-            </div>
+            <h1 class="display-3 mb-4 animated slideInDown">Verify Email</h1>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12 align-self-center">
                     <div class="card shadow p-4">
@@ -30,5 +28,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </asp:Content>
