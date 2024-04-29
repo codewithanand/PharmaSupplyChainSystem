@@ -1,12 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="TransportAssign.aspx.cs" Inherits="MediConnect.Admin.TransportAssign" %>
+﻿<%@ Page Title="Assign Transport - MediConnect" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="TransportAssign.aspx.cs" Inherits="MediConnect.Admin.TransportAssign" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Assign Transport</title>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Assign Transport
-</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">

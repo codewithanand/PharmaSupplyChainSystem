@@ -1,12 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="MediConnect.Admin.Users" %>
+﻿<%@ Page Title="Users - MediConnect" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="MediConnect.Admin.Users" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Users</title>
     <link href="../assets/admin/datatable/dataTable.bootstrap4.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Users
-</asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">

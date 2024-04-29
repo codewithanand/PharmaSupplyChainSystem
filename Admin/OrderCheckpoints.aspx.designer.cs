@@ -15,15 +15,6 @@ namespace MediConnect.Admin
     {
 
         /// <summary>
-        /// CheckpointsListView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView CheckpointsListView;
-
-        /// <summary>
         /// CheckpointName control.
         /// </summary>
         /// <remarks>
@@ -49,5 +40,14 @@ namespace MediConnect.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CreateCheckpointBtn;
+
+        /// <summary>
+        /// CheckpointsListView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView CheckpointsListView;
     }
 }

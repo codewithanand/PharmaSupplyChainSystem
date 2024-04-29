@@ -1,12 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="MediConnect.Admin.Products" %>
+﻿<%@ Page Title="Products - MediConnect" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="MediConnect.Admin.Products" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Products</title>
     <link href="../assets/admin/datatable/dataTable.bootstrap4.css" rel="stylesheet" />
-</asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Products
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

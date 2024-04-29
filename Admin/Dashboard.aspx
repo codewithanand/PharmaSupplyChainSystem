@@ -1,10 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="MediConnect.Admin.Dashboard" %>
+﻿<%@ Page Title="Dashboard - MediConnect" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="MediConnect.Admin.Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Dashboard</title>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Dashboard
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

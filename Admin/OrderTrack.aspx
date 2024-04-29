@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="OrderTrack.aspx.cs" Inherits="MediConnect.Admin.OrderTrack" %>
+﻿<%@ Page Title="Order Tracking - MediConnect" Language="C#" MasterPageFile="~/Admin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="OrderTrack.aspx.cs" Inherits="MediConnect.Admin.OrderTrack" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Order Tracking</title>
@@ -25,10 +25,6 @@
     
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="banner" runat="server">
-    Order Tracking
-</asp:Content>
-
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
@@ -51,7 +47,7 @@
                                                         string.Empty %>"
                                                 ></div>
                                                 <div class="pl-5">
-                                                    <h4><%# Eval("name") %> <a href="#" class="text-info"><i class="mdi mdi-eye"></i></a></h4>
+                                                    <h4><%# Eval("name") %></h4>
                                                     <small class="
                                                         <%# Convert.ToBoolean(Eval("is_delivered")) ? 
                                                             "text-success" : 
