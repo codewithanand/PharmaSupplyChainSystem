@@ -965,6 +965,10 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Manufacturer\Dashboard.aspx" />
+    <Content Include="Manufacturer\Orders.aspx" />
+    <Content Include="Manufacturer\ProductAdd.aspx" />
+    <Content Include="Manufacturer\Products.aspx" />
     <Content Include="Orders.aspx" />
     <Content Include="PasswordReset.aspx" />
     <Content Include="Product.aspx" />
@@ -1223,6 +1227,41 @@
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\Manufacturer.Master.cs">
+      <DependentUpon>Manufacturer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\Manufacturer.Master.designer.cs">
+      <DependentUpon>Manufacturer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\ProductAdd.aspx.cs">
+      <DependentUpon>ProductAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\ProductAdd.aspx.designer.cs">
+      <DependentUpon>ProductAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
@@ -1500,6 +1539,7 @@
     <Content Include="assets\client\scss\bootstrap\scss\_type.scss" />
     <Content Include="assets\client\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="assets\client\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Manufacturer\Manufacturer.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

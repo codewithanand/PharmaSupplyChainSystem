@@ -77,7 +77,7 @@ namespace MediConnect
                     Response.Redirect("Admin/SupplierDashboard.aspx");
                     break;
                 case 3:
-                    Response.Redirect("Admin/ManufacturerDashboard.aspx");
+                    Response.Redirect("Manufacturer/Dashboard.aspx");
                     break;
                 case 4:
                     Response.Redirect("Admin/WholesalerDashboard.aspx");

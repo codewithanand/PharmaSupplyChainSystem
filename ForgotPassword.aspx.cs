@@ -1,5 +1,6 @@
 ﻿using MediConnect.Utils;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace MediConnect
@@ -9,72 +10,92 @@ namespace MediConnect
         SqlConnection con = Connection.Connect();
         protected void Page_Load(object sender, EventArgs e)
         {
-            SuccessMessagePH.Visible = false;
-            ErrorMessagePH.Visible = false;
+            ErrorMessage.Text = string.Empty;
+            SuccessMessage.Text = string.Empty;
         }
 
         protected void SendButton_Click(object sender, EventArgs e)
         {
             string email = Email.Text.ToString();
-            con.Open();
-            string checkQry = "SELECT expires_at, token FROM [password_reset_tokens] WHERE email=@email";
-            SqlCommand checkCmd = new SqlCommand(checkQry, con);
-            checkCmd.Parameters.AddWithValue("email", email);
-            SqlDataReader reader = checkCmd.ExecuteReader();
-            if (reader.Read())
+            bool isUserExist = CheckEmail(email);
+            if (isUserExist)
             {
-                DateTime expires_at = (DateTime)reader.GetValue(0);
-                string password_reset_token = reader.GetValue(1).ToString();
-                con.Close();
-                if(expires_at < DateTime.Now)
+                int isPasswordExpired = CheckPasswordResetToken(email);
+                if (isPasswordExpired == 1)
                 {
-                    try
-                    {
-                        UpdatePasswordResetToken(email, password_reset_token);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                        SuccessMessagePH.Visible = false;
-                        ErrorMessagePH.Visible = true;
-                        ErrorMessage.Text = "Error while sending password reset link.";
-                    }
-                    SuccessMessagePH.Visible = true;
-                    ErrorMessagePH.Visible = false;
+                    string password_reset_token = TokenGenerator.Token(8);
+                    UpdatePasswordResetToken(email, password_reset_token);
+                    ErrorMessage.Text = string.Empty;
                     SuccessMessage.Text = "Password reset link sent!";
+                }
+                else if (isPasswordExpired == 0)
+                {
+                    ErrorMessage.Text = "A password reset link is already sent!";
+                    SuccessMessage.Text = string.Empty;
                 }
                 else
                 {
-                    SuccessMessagePH.Visible = false;
-                    ErrorMessagePH.Visible = true;
-                    ErrorMessage.Text = "Password reset link already sent!";
+                    string password_reset_token = TokenGenerator.Token(8);
+                    InsertPasswordResetToken(email, password_reset_token);
+                    ErrorMessage.Text = string.Empty;
+                    SuccessMessage.Text = "Password reset link sent!";
                 }
             }
             else
             {
-                con.Close();
-                try
-                {
-                    InsertPasswordResetToken(email);
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine(ex);
-                    SuccessMessagePH.Visible = false;
-                    ErrorMessagePH.Visible = true;
-                    ErrorMessage.Text = "Error while sending password reset link.";
-                }
-                SuccessMessagePH.Visible = true;
-                ErrorMessagePH.Visible = false;
-                SuccessMessage.Text = "Password reset link sent!";
+                ErrorMessage.Text = "User does not exist!";
+                SuccessMessage.Text = string.Empty;
             }
         }
 
-        protected void InsertPasswordResetToken(string email)
+        protected int CheckPasswordResetToken(string email)
         {
-            // Generating 8-digit password reset token
-            string password_reset_token = TokenGenerator.Token(8);
+            con.Open();
+            SqlCommand getCmd = new SqlCommand("SELECT expires_at, token FROM [password_reset_tokens] WHERE email=@email", con);
+            getCmd.Parameters.AddWithValue("@email", email);
+            SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            con.Close();
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                DateTime expires_at = (DateTime)ds.Tables[0].Rows[0]["expires_at"];
+                if (expires_at < DateTime.Now)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
 
+        protected bool CheckEmail(string email)
+        {
+            con.Open();
+            SqlCommand getCmd = new SqlCommand("SELECT * FROM [users] WHERE email=@email", con);
+            getCmd.Parameters.AddWithValue("@email", email);
+            SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            con.Close();
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        protected void InsertPasswordResetToken(string email, string password_reset_token)
+        {
             con.Open();
             string insertQry = "INSERT INTO [password_reset_tokens] (email, token, expires_at, created_at, updated_at) VALUES (@email, @token, @expires_at, @created_at, @updated_at)";
             SqlCommand insertCmd = new SqlCommand(insertQry, con);

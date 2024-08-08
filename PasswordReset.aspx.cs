@@ -47,6 +47,7 @@ namespace MediConnect
                     try
                     {
                         ChangePassword(email, password);
+                        Response.Redirect("Login.aspx");
                     }
                     catch (Exception ex)
                     {

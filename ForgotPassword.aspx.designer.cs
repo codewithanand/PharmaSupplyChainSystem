@@ -33,15 +33,6 @@ namespace MediConnect
         protected global::System.Web.UI.WebControls.Button SendButton;
 
         /// <summary>
-        /// ErrorMessagePH control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessagePH;
-
-        /// <summary>
         /// ErrorMessage control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace MediConnect
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ErrorMessage;
-
-        /// <summary>
-        /// SuccessMessagePH control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder SuccessMessagePH;
 
         /// <summary>
         /// SuccessMessage control.

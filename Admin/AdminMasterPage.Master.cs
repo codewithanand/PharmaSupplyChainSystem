@@ -9,10 +9,10 @@ namespace MediConnect.Admin
         {
             if (!IsPostBack)
             {
-                //if (!AuthMiddleware.CheckAuth())
-                //{
-                //    Response.Redirect("~/Login.aspx");
-                //}
+                if (!AuthMiddleware.CheckAuth())
+                {
+                    Response.Redirect("~/Login.aspx");
+                }
             }
         }
     }
